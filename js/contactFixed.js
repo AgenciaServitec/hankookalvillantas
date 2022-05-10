@@ -60,5 +60,6 @@ const mapContactFx = (elementsFormFixedValues,userCoordinates,userIpInfo) => ({
   message: elementsFormFixedValues[5],
   coordinates: userCoordinates,
   additionalInfo: userIpInfo,
-  termsAndConditions: elementTermsAndConditions.checked
+  termsAndConditions: elementTermsAndConditions.checked,
+  hostname: window.location.hostname || "hankookalvillantas.com",
 });
