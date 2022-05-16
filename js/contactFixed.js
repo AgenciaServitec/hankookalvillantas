@@ -13,7 +13,7 @@ const validateFormContactFx = async (e) => {
   try {
     e.preventDefault();
 
-    activeSpinnerInButton(elementBtnSendEmailFx);
+     activeSpinnerInButton(elementBtnSendEmailFx);
 
     const result = validateFormFields(
       [...elementsFormFixed],
@@ -38,6 +38,8 @@ const validateFormContactFx = async (e) => {
 
     if (!response.ok) throw new Error(response.statusText);
 
+    isVisibleFormContactFx(false);
+
     window.location.href = "../gracias.html";
   } catch (e) {
     console.log("Error email send:", e);
@@ -55,11 +57,11 @@ const mapContactFx = (elementsFormFixedValues,userCoordinates,userIpInfo) => ({
   firstName: elementsFormFixedValues[0],
   lastName: elementsFormFixedValues[1],
   email: elementsFormFixedValues[2],
-  phoneNumber: elementsFormFixedValues[3],
+  phoneNumber: elementsFormFixedValues[3] || null,
   issue: elementsFormFixedValues[4],
   message: elementsFormFixedValues[5],
-  coordinates: userCoordinates,
-  additionalInfo: userIpInfo,
+  coordinates: userCoordinates || null,
+  additionalInfo: userIpInfo || null,
   termsAndConditions: elementTermsAndConditions.checked,
   hostname: window.location.hostname || "hankookalvillantas.com",
 });

@@ -4216,11 +4216,11 @@ button:focus {
   width: auto;
   height: auto;
   background: #ed3833;
-  padding: 8px 0.7rem;
+  padding: 8px 1rem;
   color: #fff;
   cursor: pointer;
   top: 18%;
-  left: -57px;
+  left: -62px;
   z-index: 999999;
   font-weight: 800;
   font-size: 1.3rem;
@@ -4231,22 +4231,23 @@ button:focus {
 .form-contact-container-fixed {
   position: fixed;
   left: 0;
-  top: 16%;
+  top: 7%;
   z-index: 999999;
-  background-color: rgba(0, 0, 0, 0.77);
+  background-color: rgba(0, 0, 0, 0.9);
   padding: 1rem 1.7rem;
   border-bottom-right-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
   display: flex;
   flex-direction: column;
+  width: 35rem;
 }
 
 .form-contact-container-fixed .item-icon-close-form {
   position: absolute;
   top: -11px;
   right: -13px;
-  color: #000;
-  background: #fff;
+  color: #ffffff;
+  background: #ed3833;
   border-radius: 50%;
   width: 2rem;
   height: 2rem;
@@ -4255,6 +4256,8 @@ button:focus {
   justify-content: center;
   box-shadow: -1px 1px 5px #444;
   cursor: pointer;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
 }
 
 .form-contact-container-fixed h1 {
@@ -4288,6 +4291,7 @@ button:focus {
 }
 
 .form-contact-container-fixed .form-contact {
+  margin: 1rem 0;
   padding: 1rem 0;
   box-sizing: border-box;
   position: relative;
@@ -4317,7 +4321,7 @@ input {
 
 .item-send-button .btn-send {
   background: #ed3833;
-  padding: 8px 1.5rem;
+  padding: 8px 4rem;
   color: #fff;
   cursor: pointer;
   font-weight: 800;
@@ -4335,12 +4339,29 @@ input {
 .size_truck {
   font-size: 30px;
 }
-@media (max-width: 550px) {
+@include mediaQuery(mobile) {
   .form-contact-container-fixed {
-    width: 95%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+  }
+  .form-contact-container-fixed .header-wrapper {
+    text-align: center;
+  }
+  .form-contact-container-fixed .item-icon-close-form {
+    top: 1rem;
+    right: 1rem;
+  }
+  .item-send-button .btn-send {
+    width: 100%;
+    justify-content: center;
   }
 }
-@media (max-width: 575px) {
+
+@include mediaQuery(mobile) {
   .marcas img {
     max-width: 65%;
   }

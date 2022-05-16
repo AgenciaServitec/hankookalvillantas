@@ -5,6 +5,7 @@ const methodTypes = {
   POST: {
     method: "POST",
     headers: {
+      "Access-Control-Allow-Origin": null,
       "content-Type": "application/json",
       Accept: "application/json",
     },
@@ -31,6 +32,8 @@ const fetchApiUrls = async () => {
 //send email
 const fetchSendEmail = async (contact) => {
   const urls = await fetchApiUrls();
+
+  console.log("urls->",urls);
 
   return await fetchApi(`${urls.apiUrl}/contact`, "POST", {
       contact: contact,
@@ -154,7 +157,7 @@ const activeSpinnerInButton = (
   //Spinner visible
   btnElement.disabled = true;
   btnElement.innerHTML =  `<div style="display:flex;align-items:center;"><span
-        class="spinner-border spinner-border-sm"
+        class="spinner-border spinner-border-sm spin disabled"
         role="status"
         aria-hidden="true"
         style="margin-right: 5px;"

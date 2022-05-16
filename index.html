@@ -11,7 +11,10 @@
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
     <title>Venta de LLantas Hankook, Mejores Precios</title>
 
-    <meta name="keywords" content="Venta de LLantas Hankook, Mejores Precios" />
+    <meta
+      name="keywords"
+      content="Venta de LLantas Hankook,Venta de LLantas, Mejores Precios, Llantas, Llantas carro"
+    />
     <meta
       name="description"
       content="Ventas de LLantas Hankook a un precio insuperable. Distribuidor Autorizado. Seguridad, Rendimiento y Fiabilidad. Hankook, Bridgestone, Michelín, Continental, Firestone, Yokohama, Goodyear, Toyo Tires, Dunlop Tires"
@@ -68,17 +71,20 @@
     ></script>
     <!-- End of  Zendesk Widget script -->
 
-    
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GMBWPCZQVJ"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-GMBWPCZQVJ"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      gtag('config', 'G-GMBWPCZQVJ');
+      gtag("config", "G-GMBWPCZQVJ");
     </script>
-    
   </head>
   <body>
     <div class="body_section">
@@ -750,7 +756,7 @@
       </div>
 
       <div
-        class="form-contact-container form-contact-container-fixed"
+        class="form-contact-container form-contact-container-fixed none"
         id="container-form-contact-us-fixed"
       >
         <div class="item-icon-close-form" id="item-icon-close-form">X</div>
@@ -835,12 +841,18 @@
               ></textarea>
             </div>
           </div>
-
           <div
             class="item-terms-and-conditions d-flex justify-content-start align-items-center"
           >
             <input type="checkbox" checked id="checkbox-terms-and-conditions" />
             <a href="#terminos-condiciones">Terminos y condiciónes</a>
+          </div>
+
+          <div class="grid-100">
+            <div
+              class="g-recaptcha"
+              data-sitekey="6Ldo2-IfAAAAALmxAVvFEq3Iv_TdObOPo325z7i8"
+            ></div>
           </div>
 
           <div class="form-item-row">
@@ -879,7 +891,13 @@
       <script src="js/script.js"></script>
       <script src="js/utils.js"></script>
       <script src="js/isVisibleContactFixed.js"></script>
+      <script
+        src="https://www.google.com/recaptcha/api.js"
+        async
+        defer
+      ></script>
       <script src="js/contactFixed.js"></script>
+      <script src="js/onLoadRecapchat.js"></script>
     </div>
   </body>
 </html>
