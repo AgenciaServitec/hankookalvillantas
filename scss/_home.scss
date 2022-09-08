@@ -4295,6 +4295,14 @@ button:focus {
   padding: 1rem 0;
   box-sizing: border-box;
   position: relative;
+
+  .item-form-input {
+    label {
+      font-size: 0.9em;
+      color: #fff;
+      margin: 0;
+    }
+  }
 }
 
 .form-contact-container-fixed .form-contact textarea,

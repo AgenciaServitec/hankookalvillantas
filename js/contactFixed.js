@@ -3,7 +3,6 @@ const elementBtnSendEmailFx = document.querySelector("#btn-send-message-fixed");
 const elementsFormFixed = document.querySelectorAll(
   ".contact-form-fixed__elements"
 );
-const elementTermsAndConditions = document.querySelector("#checkbox-terms-and-conditions");
 
 elementFormContactFx.addEventListener("submit", (e) =>
   validateFormContactFx(e)
@@ -22,17 +21,13 @@ const validateFormContactFx = async (e) => {
 
     if (!result) return false;
 
-    if(!elementTermsAndConditions.checked) return alert("Debe aceptar los términos y condiciones antes de enviar el mensaje");
-
     const elementsFormFixedValues = [...elementsFormFixed].map(
       (element) => element.value
     );
-
-    const userCoordinates = await getUserCoordinates();
     
     const userIpInfo = await fetchUserIpInfo();
 
-    const formData = await mapContactFx(elementsFormFixedValues,userCoordinates,userIpInfo);
+    const formData =  mapContactFx(elementsFormFixedValues,userIpInfo);
 
     const response = await fetchSendEmail(formData);
 
@@ -53,15 +48,13 @@ const validateFormContactFx = async (e) => {
   }
 };
 
-const mapContactFx = (elementsFormFixedValues,userCoordinates,userIpInfo) => ({
+const mapContactFx = (elementsFormFixedValues,userIpInfo) => ({
   firstName: elementsFormFixedValues[0],
   lastName: elementsFormFixedValues[1],
   email: elementsFormFixedValues[2],
   phoneNumber: elementsFormFixedValues[3] || null,
   issue: elementsFormFixedValues[4],
   message: elementsFormFixedValues[5],
-  coordinates: userCoordinates || null,
   additionalInfo: userIpInfo || null,
-  termsAndConditions: elementTermsAndConditions.checked,
   hostname: window.location.hostname || "hankookalvillantas.com",
 });

@@ -50,7 +50,6 @@
       gtag("config", "AW-617173048");
     </script>
 
-
     <!-- Start of  Zendesk Widget script -->
     <script
       id="ze-snippet"
@@ -65,9 +64,11 @@
     ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
+
       function gtag() {
         dataLayer.push(arguments);
       }
+
       gtag("js", new Date());
 
       gtag("config", "G-GMBWPCZQVJ");
@@ -671,7 +672,7 @@
                   <li>
                     <p>
                       <i class="fa fa-mobile"></i>
-                      998325895
+                      967787227
                     </p>
                   </li>
                   <li>
@@ -749,8 +750,7 @@
         <div class="item-icon-close-form" id="item-icon-close-form">X</div>
         <div class="bg-form-filter"></div>
         <div class="header-wrapper">
-          <h2>Consultas y cotizaciones</h2>
-          <h4>Comunícate con Nosotros</h4>
+          <h4>Consultas y cotizaciones</h4>
         </div>
         <form
           class="needs-validation-form form-contact"
@@ -759,87 +759,78 @@
         >
           <div class="grid-50">
             <div class="item-form-input">
-              <!-- <label for="validationCustom01">Nombres:</label> -->
+              <label for="contact-form-fixed__firstName">Nombres:</label>
               <input
                 type="text"
                 class="contact-form-fixed__elements"
-                placeholder="NOMBRES"
+                id="contact-form-fixed__firstName"
+                placeholder="Ingrese nombres"
                 required
               />
             </div>
 
             <div class="item-form-input">
-              <!-- <label for="validationCustom01">Nombres:</label> -->
+              <label for="contact-form-fixed__lastName">Apellidos:</label>
               <input
                 type="text"
                 class="contact-form-fixed__elements"
-                placeholder="APELLIDOS"
+                id="contact-form-fixed__lastName"
+                placeholder="Ingrese apellidos"
                 required
               />
             </div>
           </div>
           <div class="grid-100">
             <div class="item-form-input">
-              <!-- <label for="validationCustom04 exampleFormControlTextarea1">Email:</label> -->
+              <label for="contact-form-fixed__email">Email:</label>
               <input
                 type="email"
                 min="0"
                 class="contact-form-fixed__elements"
-                placeholder="EMAIL"
+                id="contact-form-fixed__email"
+                placeholder="Ingrese email"
                 required
               />
             </div>
           </div>
           <div class="grid-100">
             <div class="item-form-input">
-              <!-- <label for="validationCustom03 exampleFormControlTextarea1">Teléfono:</label> -->
+              <label for="contact-form-fixed__phone">Teléfono:</label>
               <input
-                type="text"
+                type="number"
                 min="0"
                 class="contact-form-fixed__elements"
+                id="contact-form-fixed__phone"
                 required
-                placeholder="CELULAR"
+                placeholder="Ingrese teléfono"
               />
             </div>
           </div>
 
           <div class="grid-100">
             <div class="item-form-input">
-              <!-- <label for="validationCustom02 exampleFormControlTextarea1">Empresa:</label> -->
+              <label for="contact-form-fixed__issue">Asunto:</label>
               <input
                 type="text"
                 min="0"
                 class="contact-form-fixed__elements"
                 id="contact-form-fixed__issue"
-                placeholder="ASUNTO"
+                placeholder="Ingrese asunto"
               />
             </div>
           </div>
 
           <div class="grid-100">
             <div class="item-form-input">
-              <!-- <label for="validationCustom02 exampleFormControlTextarea1">Empresa:</label> -->
-              <textarea
+              <label for="contact-form-fixed__message">Mensaje:</label
+              ><textarea
                 type="text"
                 min="0"
                 class="contact-form-fixed__elements"
                 id="contact-form-fixed__message"
-                placeholder="MENSAJE"
+                placeholder="Ingrese mensaje"
               ></textarea>
             </div>
-          </div>
-          <div
-            class="item-terms-and-conditions d-flex justify-content-start align-items-center"
-          >
-            <input type="checkbox" checked id="checkbox-terms-and-conditions" />
-            <a href="#terminos-condiciones">Terminos y condiciónes</a>
-          </div>
-
-          <div class="grid-100">
-            <div
-              class="g-recaptcha"
-              data-sitekey="6Ldo2-IfAAAAALmxAVvFEq3Iv_TdObOPo325z7i8"
-            ></div>
           </div>
 
           <div class="form-item-row">
