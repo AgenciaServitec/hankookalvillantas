@@ -33,8 +33,6 @@ const fetchApiUrls = async () => {
 const fetchSendEmail = async (contact) => {
   const urls = await fetchApiUrls();
 
-  console.log("urls->",urls);
-
   return await fetchApi(`${urls.apiUrl}/contact`, "POST", {
       contact: contact,
   });
