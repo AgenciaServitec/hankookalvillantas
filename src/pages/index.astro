@@ -1,0 +1,51 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Form } from "../components";
+//import Card from "../components/Card.astro";
+---
+
+<BaseLayout title="Hankook Alvillantas">
+  <main>
+    <div class="wrapper-banner">
+      <img src="./initial-banner.webp" alt="banner hankook alvillantas" />
+      <div class="text-absolute-item">
+        <h1>La mejora calidad de NEUMÁTICOS A TU ALCANCE</h1>
+      </div>
+    </div>
+    <Form>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos, eos
+        quibusdam. Aut qui facere tempora aliquid dolorum recusandae, quidem
+        voluptatibus ad? Dignissimos impedit ipsa error doloremque voluptatibus
+        voluptate ullam numquam?
+      </p>
+
+      <h2>HOLA MUDO</h2>
+    </Form>
+  </main>
+</BaseLayout>
+
+<style lang="scss">
+  main {
+    .wrapper-banner {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+      .text-absolute-item {
+        margin-top: -3em;
+        font-size: 2em;
+        width: 28em;
+        padding: 2em 1em;
+        position: absolute;
+        color: #fff;
+        text-transform: uppercase;
+        font-style: italic;
+      }
+    }
+  }
+</style>

@@ -1,0 +1,30 @@
+---
+interface Props {
+  type?: "primary" | "secondary";
+}
+
+const { type = "primary" } = Astro.props;
+---
+
+<button class={type === "primary" ? "primary" : "secondary"}>
+  <slot />
+</button>
+
+<style lang="scss">
+  button {
+    padding: 0.7em 1.2em;
+    text-align: center;
+    border-radius: 7em;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .primary {
+    background-color: #fe4e02;
+    color: #fff;
+  }
+  .secondary {
+    background-color: #8b8b8b;
+    color: #fff;
+  }
+</style>
