@@ -1,21 +1,76 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Button from "../../components/Button.astro";
+import CardProduct from "../../components/CardProduct.astro";
+
+const styleButton = {
+  margin: "0 auto",
+  fontSize: "2em",
+  textTransform: "upperCase",
+  fontStyle: "italic",
+};
 
 console.log("products page");
 ---
 
 <BaseLayout title="Productos">
   <main>
-    <h2>PRODUCTS PAGE</h2>
+    <h2>NUESTROS <span>PRODUCTOS</span></h2>
+    <section class="products">
+      <CardProduct />
+      <CardProduct />
+      <CardProduct />
+      <CardProduct />
+      <CardProduct />
+      <CardProduct />
+      <CardProduct />
+      <CardProduct />
+    </section>
+    <section class="quoteButton">
+      <Button styleLine={styleButton}>Cotizar otro</Button>
+    </section>
   </main>
 </BaseLayout>
 
 <style lang="scss">
   main {
-    background: purple;
-    h1 {
-      color: red;
-      font-size: 2em;
+    width: 100%;
+    margin-top: 10rem;
+    padding: 2em;
+    h2 {
+      color: #fff;
+      font-size: 3em;
+      font-style: italic;
+      text-align: center;
+      line-height: 0.85;
+      margin-bottom: 2.5em;
+
+      @media (max-width: 576px){
+        font-size: 2em;
+      }
+      
+      @media (max-width: 375px){
+        font-size: 1.5em;
+      }
+
+      span {
+        color: #fc4c09;
+        font-size: 1.5em;
+        display: block;
+      }
     }
+  }
+  .products {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2em 1em;
+  }
+  .quoteButton {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6em 0 2em;
   }
 </style>

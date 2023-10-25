@@ -1,12 +1,13 @@
 ---
 interface Props {
   type?: "primary" | "secondary";
+  styleLine?;
 }
 
-const { type = "primary" } = Astro.props;
+const { type = "primary", styleLine} = Astro.props;
 ---
 
-<button class={type === "primary" ? "primary" : "secondary"}>
+<button class={type === "primary" ? "primary" : "secondary"} style={styleLine}>
   <slot />
 </button>
 
@@ -26,5 +27,11 @@ const { type = "primary" } = Astro.props;
   .secondary {
     background-color: #8b8b8b;
     color: #fff;
+  }
+
+  .buttonCard{
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
 </style>
