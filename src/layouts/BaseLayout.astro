@@ -1,6 +1,7 @@
 ---
 import { Button } from "../components";
 import Footer from "./Footer.astro";
+import Header from "./Header.astro";
 
 interface Props {
 	title: string;
@@ -20,21 +21,8 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<header>
-			<div class="img-logo">
-				<a href="/"
-					><img src="./logo.webp" alt="logo hankook alvillantas" /></a
-				>
-			</div>
-			<div class="item-menu">
-				<ul>
-					<li><a href="/">Inicio</a></li>
-					<li><a href="/about-us">Nosotros</a></li>
-					<li><a href="/products">Productos</a></li>
-					<li><Button>Contacto</Button></li>
-				</ul>
-			</div>
-		</header>
+		<Header/>
+
 		<div class="main">
 			<slot />
 		</div>
@@ -55,38 +43,7 @@ const { title } = Astro.props;
 		background: #13151a;
 		color: #fff;
 	}
-	header {
-		width: 100%;
-		height: auto;
-		display: flex;
-		justify-content: space-between;
-		padding: 1em;
-		position: fixed;
-		top: 0;
-		z-index: 700;
-		.img-logo {
-			img {
-				width: 11em;
-				height: auto;
-				object-fit: contain;
-			}
-		}
-		.item-menu {
-			display: flex;
-			justify-content: end;
-			ul {
-				list-style: none;
-				padding: 0;
-				display: flex;
-				align-items: center;
-				gap: 1em;
-				li a {
-					text-decoration: none;
-					color: #fff;
-				}
-			}
-		}
-	}
+
 	.main {
 		width: 100%;
 		min-height: 78vh;

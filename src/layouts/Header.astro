@@ -1,0 +1,56 @@
+---
+import {Button} from "../components";
+---
+
+
+<header>
+    <div class="img-logo">
+        <a href="/"
+        ><img src="./logo.webp" alt="logo hankook alvillantas" /></a
+        >
+    </div>
+    <div class="item-menu">
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/about-us">Nosotros</a></li>
+            <li><a href="/products">Productos</a></li>
+            <li><Button>Contacto</Button></li>
+        </ul>
+    </div>
+</header>
+
+<style lang="scss">
+  header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    position: fixed;
+    top: 0;
+    z-index: 700;
+    .img-logo {
+      img {
+        width: 11em;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+    .item-menu {
+      display: flex;
+      justify-content: end;
+      ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        li a {
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+</style>
