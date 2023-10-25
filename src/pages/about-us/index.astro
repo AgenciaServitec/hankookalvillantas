@@ -6,16 +6,72 @@ console.log("About us page");
 
 <BaseLayout title="Nosotros">
   <main>
-    <h2>ABOUT US PAGE</h2>
+    <section class="aboutUs">
+      <div class="aboutUs__img">
+        <img src="../../../public/images/nosotros.webp" alt="" />
+      </div>
+      <div class="aboutUs__text">
+        <h2 class="aboutUs__text-title">Sobre nosotros</h2>
+        <p class="aboutUs__text-description">
+          En Alvillantas, nos enorgullece ofrecer una amplia variedad de
+          opciones para asegurarnos de que encuentres el neumático perfecto para
+          tu vehículo. Cualquiera que sea su presupuesto y el tamaño de
+          automóvil que esté buscando, estamos seguros de que podemos ayudarlo a
+          encontrar lo que sea adecuado para usted.
+        </p>
+      </div>
+    </section>
   </main>
 </BaseLayout>
 
 <style lang="scss">
   main {
-    background: green;
-    h1 {
-      color: red;
-      font-size: 2em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 11.5rem;
+    @media (max-width: 1200px){
+      margin-bottom: 5rem;
+    }
+  }
+  .aboutUs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    gap: 2rem;
+    padding: 0 7rem;
+    @media (max-width: 1200px){
+      padding: 0 2rem;
+    }
+    &__img {
+      max-width: 500px;
+      height: 280px;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+      }
+    }
+    &__text {
+      width: 35%;
+      &-title {
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-style: italic;
+        color: #fc4c09;
+        margin-bottom: 0.625rem;
+        @media (max-width: 576px){
+          font-size: 1.5rem;
+        }
+      }
+      &-description {
+        text-align: justify;
+      }
+      @media (max-width: 1024px){
+        width: 100%;
+      }
     }
   }
 </style>
