@@ -12,23 +12,12 @@ import { Form } from "../components";
         <h1>La mejora calidad de NEUMÁTICOS A TU ALCANCE</h1>
       </div>
     </div>
-    <Form>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos, eos
-        quibusdam. Aut qui facere tempora aliquid dolorum recusandae, quidem
-        voluptatibus ad? Dignissimos impedit ipsa error doloremque voluptatibus
-        voluptate ullam numquam?
-      </p>
 
-      <h2>HOLA MUDO</h2>
-    </Form>
   </main>
 </BaseLayout>
 
 <style lang="scss">
   main {
-    margin-top: 4em;
-
     .wrapper-banner {
       position: relative;
       display: flex;
@@ -40,8 +29,8 @@ import { Form } from "../components";
 
       }
       .text-absolute-item {
-        margin-top: 3em;
-        font-size: 1em;
+
+        font-size: .7em;
         max-width: 28em;
         padding: 2em 1em;
         position: absolute;
@@ -53,10 +42,19 @@ import { Form } from "../components";
     }
     }
 
+  @media (min-width: 576px) {
+    main{
+      .wrapper-banner {
+        .text-absolute-item{
+          font-size: 1em;
+        }
+      }
+    }
+  }
 
-  @media (min-width: 500px) {
+
+  @media (min-width: 768px) {
     main {
-      margin-top: 0;
       .wrapper-banner {
         position: relative;
         display: flex;
@@ -68,8 +66,8 @@ import { Form } from "../components";
 
         }
         .text-absolute-item {
-          margin-top: -3em;
-          font-size: 2em;
+          margin-top: 2em;
+          font-size: 1.5em;
           max-width: 28em;
           padding: 2em 1em;
           position: absolute;
@@ -77,6 +75,24 @@ import { Form } from "../components";
           text-transform: uppercase;
           font-style: italic;
 
+        }
+      }
+    }
+  }
+
+  @media (min-width: 920px) {
+    main{
+      .wrapper-banner {
+
+        img {
+          width: 100%;
+          object-fit: fill;
+          height: 70vh;
+
+        }
+
+        .text-absolute-item{
+          font-size: 2em;
         }
       }
     }

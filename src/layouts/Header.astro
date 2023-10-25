@@ -1,56 +1,102 @@
 ---
-import {Button} from "../components";
+import { Button, IconFontAwesome } from "../components";
 ---
 
 
 <header>
-    <div class="img-logo">
-        <a href="/"
-        ><img src="./logo.webp" alt="logo hankook alvillantas" /></a
-        >
-    </div>
-    <div class="item-menu">
-        <ul>
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/about-us">Nosotros</a></li>
-            <li><a href="/products">Productos</a></li>
-            <li><Button>Contacto</Button></li>
-        </ul>
-    </div>
+  <div class="img-logo">
+    <a href="/"
+    ><img src="./logo.webp" alt="logo hankook alvillantas" /></a
+    >
+
+    <button class="item-menu-button">
+      <IconFontAwesome  width="30px" color="#fc4c09" path="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+    </button>
+  </div>
+
+  <div class="item-menu">
+    <ul>
+      <li><a href="/">Inicio</a></li>
+      <li><a href="/about-us">Nosotros</a></li>
+      <li><a href="/products">Productos</a></li>
+      <li>
+        <Button>Contacto</Button>
+      </li>
+    </ul>
+  </div>
 </header>
 
 <style lang="scss">
+
   header {
     width: 100%;
     height: auto;
-    display: flex;
-    justify-content: space-between;
-    padding: 1em;
-    position: fixed;
-    top: 0;
-    z-index: 700;
+
     .img-logo {
+      padding: 1em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
       img {
-        width: 11em;
+        width: 9em;
         height: auto;
         object-fit: contain;
       }
+
+      .item-menu-button{
+        border: none;
+        background: none;
+      }
     }
+
     .item-menu {
+      display: none;
+    }
+
+  }
+
+  @media (min-width: 768px) {
+    header {
       display: flex;
-      justify-content: end;
-      ul {
-        list-style: none;
-        padding: 0;
+      justify-content: space-between;
+      padding: 1em;
+      position: fixed;
+      top: 0;
+      z-index: 700;
+
+      .img-logo {
+        display: initial;
+        img {
+          width: 11em;
+          height: auto;
+          object-fit: contain;
+        }
+
+        .item-menu-button{
+          display: none;
+        }
+      }
+
+      .item-menu {
         display: flex;
-        align-items: center;
-        gap: 1em;
-        li a {
-          text-decoration: none;
-          color: #fff;
+        justify-content: end;
+
+        ul {
+          list-style: none;
+          padding: 0;
+          display: flex;
+          align-items: center;
+          gap: 1em;
+
+          li a {
+            text-decoration: none;
+            color: #fff;
+          }
         }
       }
     }
   }
+
 
 </style>
