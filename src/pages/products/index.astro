@@ -1,24 +1,17 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import Button from "../../components/Button.astro";
-import CardProduct from "../../components/CardProduct.astro";
-import Title from "../../components/ui/Title.astro";
-
-console.log("products page");
+import { BaseLayout } from "../../layouts";
+import { Button, CardProduct, Title } from "../../components";
 ---
 
 <BaseLayout title="Productos">
   <main>
     <Title title="NUESTROS">PRODUCTOS</Title>
     <section class="products">
-      <CardProduct />
-      <CardProduct />
-      <CardProduct />
-      <CardProduct />
-      <CardProduct />
-      <CardProduct />
-      <CardProduct />
-      <CardProduct />
+      {
+        Array.from(Array(27).keys()).map((n, index) => (
+          <CardProduct key={index} />
+        ))
+      }
     </section>
     <section class="quoteButton">
       <Button type="tertiary">Cotizar otro</Button>

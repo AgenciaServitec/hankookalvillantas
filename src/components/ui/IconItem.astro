@@ -1,24 +1,35 @@
 ---
-import IconFontAwesome from "./IconFontAwesome.astro"
+import IconFontAwesome from "./IconFontAwesome.astro";
 
 interface Props {
-  path?:string,
-  title:string
-  span:string,
-  href?:string
-  isAnchor?: boolean
+  path?: string;
+  title: string;
+  span: string;
+  href?: string;
+  isAnchor?: boolean;
 }
 
-const {title="967787227",path,span="Contáctanos",href="#", isAnchor=false} = Astro.props
-
+const {
+  title = "967787227",
+  path,
+  span = "Contáctanos",
+  href = "#",
+  isAnchor = false,
+} = Astro.props;
 ---
 
 <div class="item-icon">
-  <IconFontAwesome path={path} width="2.5em" color="#fc4c09"/>
+  <IconFontAwesome path={path} width="2.5em" color="#fc4c09" />
 
   <h2>{title}</h2>
   {
-    isAnchor ? (<a href={href} target="_blank">{span}</a>) : (<span>{span}</span>)
+    isAnchor ? (
+      <a href={href} target="_blank">
+        {span}
+      </a>
+    ) : (
+      <span>{span}</span>
+    )
   }
 </div>
 
@@ -37,7 +48,8 @@ const {title="967787227",path,span="Contáctanos",href="#", isAnchor=false} = As
       font-size: 1em;
     }
 
-    a, span {
+    a,
+    span {
       color: #fc4c09;
       font-weight: 600;
       font-size: 1.2em;
@@ -45,4 +57,3 @@ const {title="967787227",path,span="Contáctanos",href="#", isAnchor=false} = As
     }
   }
 </style>
-

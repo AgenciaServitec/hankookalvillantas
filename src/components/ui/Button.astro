@@ -1,10 +1,10 @@
 ---
 interface Props {
   type?: "primary" | "secondary" | "tertiary";
-  styleLine?: object
+  styleLine?: Record<string, string>;
 }
 
-const { type = "primary", styleLine} = Astro.props;
+const { type = "primary", styleLine } = Astro.props;
 ---
 
 <button class={type} style={styleLine}>
@@ -28,18 +28,12 @@ const { type = "primary", styleLine} = Astro.props;
     background-color: #8b8b8b;
     color: #fff;
   }
-  .tertiary{
+  .tertiary {
     margin: 0 auto;
     font-size: 1.5em;
     text-transform: upperCase;
     font-style: italic;
     background-color: #fe4e02;
     color: #fff;
-  }
-
-  .buttonCard{
-    position: absolute;
-    bottom: 0;
-    right: 0;
   }
 </style>

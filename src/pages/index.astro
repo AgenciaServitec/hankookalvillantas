@@ -1,6 +1,11 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import { CarouselProducts,Banner, Testimonials, MapLocation } from "../components";
+import { BaseLayout } from "../layouts";
+import {
+  CarouselProducts,
+  Banner,
+  Testimonials,
+  MapLocation,
+} from "../components";
 
 //import Card from "../components/Card.astro";
 ---
@@ -14,14 +19,13 @@ import { CarouselProducts,Banner, Testimonials, MapLocation } from "../component
       </div>
     </div>
 
-    <CarouselProducts/>
+    <CarouselProducts />
 
-    <Banner/>
+    <Banner />
 
-    <Testimonials/>
+    <Testimonials />
 
-    <MapLocation/>
-
+    <MapLocation />
   </main>
 </BaseLayout>
 
@@ -35,31 +39,28 @@ import { CarouselProducts,Banner, Testimonials, MapLocation } from "../component
       img {
         width: 100%;
         object-fit: contain;
-
       }
       .text-absolute-item {
-        font-size: .7em;
+        font-size: 0.7em;
         max-width: 28em;
         padding: 2em 1em;
         position: absolute;
         color: #fff;
         text-transform: uppercase;
         font-style: italic;
-
       }
     }
-    }
+  }
 
   @media (min-width: 576px) {
-    main{
+    main {
       .wrapper-banner {
-        .text-absolute-item{
+        .text-absolute-item {
           font-size: 1em;
         }
       }
     }
   }
-
 
   @media (min-width: 768px) {
     main {
@@ -71,7 +72,6 @@ import { CarouselProducts,Banner, Testimonials, MapLocation } from "../component
         img {
           width: 100%;
           object-fit: contain;
-
         }
         .text-absolute-item {
           margin-top: 2em;
@@ -82,24 +82,21 @@ import { CarouselProducts,Banner, Testimonials, MapLocation } from "../component
           color: #fff;
           text-transform: uppercase;
           font-style: italic;
-
         }
       }
     }
   }
 
   @media (min-width: 920px) {
-    main{
+    main {
       .wrapper-banner {
-
         img {
           width: 100%;
           object-fit: fill;
           height: 70vh;
-
         }
 
-        .text-absolute-item{
+        .text-absolute-item {
           font-size: 2em;
         }
       }
