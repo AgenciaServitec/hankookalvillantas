@@ -1,12 +1,13 @@
 ---
 interface Props {
   type?: "primary" | "secondary" | "tertiary";
+  styleLine?: object
 }
 
-const { type = "primary"} = Astro.props;
+const { type = "primary", styleLine} = Astro.props;
 ---
 
-<button class={type}>
+<button class={type} style={styleLine}>
   <slot />
 </button>
 
