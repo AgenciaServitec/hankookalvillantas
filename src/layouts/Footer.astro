@@ -1,19 +1,19 @@
 ---
-import { IconItem } from "../components";
+import { IconItem, Divider } from "../components";
 ---
 
-<footer>
-  <div class="line-item"></div>
+<footer class="footer">
+  <Divider />
 
   <img src="/public/logo.webp" alt="logo" />
 
-  <span class="description-item">
+  <span class="slogan-description">
     Te brindamos una atención empática y profesional. Garantizamos nuestros
     productos y servicios: Llantas, aros y mantenimiento. Las mejores llantas de
     auto.</span
   >
 
-  <section class="list-icon">
+  <section class="icons-list">
     <IconItem title="Contáctanos" span="967787227" />
     <IconItem
       title="Ubicación"
@@ -32,58 +32,55 @@ import { IconItem } from "../components";
     />
   </section>
 
-  <div class="end-item">
+  <div class="footer__bottom">
     <p>
       Copyrights © 2023 Alvillantas Todos los derechos reservados -
-      Desarrollado por Servitec Peru.
+      Desarrollado por <a href="#" class="color__primary">Agencia Servitec</a>
     </p>
   </div>
 </footer>
 
 <style lang="scss">
-  footer {
+  .footer {
     display: flex;
     align-items: center;
     flex-direction: column;
-    .line-item {
-      width: 80%;
-      background: #fc4c09;
-      height: 5px;
-      margin: 0 auto;
-    }
+    margin-top: 2em;
 
     img {
       width: 10em;
-      margin: 1em auto;
+      margin: 1.2em auto;
     }
-    .description-item {
+    .slogan-description {
       text-align: center;
       color: #ffffff8c;
       padding: 1em;
     }
-
-    .list-icon {
-      padding: 1.5em;
+    .icons-list {
+      padding: 2em 1.5em;
       gap: 1em;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(12em, auto));
       width: 100%;
     }
-
-    .end-item {
+    &__bottom {
       background: #000;
       width: 100%;
-      padding: 1em 0;
+      padding: 1em;
 
       p {
         text-align: center;
+        font-size: 0.9em;
+        a {
+          text-decoration: none;
+        }
       }
     }
   }
 
   @media (min-width: 500px) {
     footer {
-      .description-item {
+      .slogan-description {
         max-width: 50%;
       }
     }

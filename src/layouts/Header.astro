@@ -33,6 +33,7 @@ import Icon from "astro-icon";
 </header>
 
 <style lang="scss">
+  //MOBILE AND TABLET
   header {
     width: 100%;
     height: auto;
@@ -60,7 +61,8 @@ import Icon from "astro-icon";
     }
   }
 
-  @media (min-width: 768px) {
+  //DESKTOP
+  @media (min-width: 920px) {
     header {
       display: flex;
       justify-content: space-between;
@@ -68,6 +70,8 @@ import Icon from "astro-icon";
       position: fixed;
       top: 0;
       z-index: 700;
+      max-width: 1530px;
+      margin: auto;
 
       .img-logo {
         display: initial;

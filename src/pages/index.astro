@@ -5,43 +5,52 @@ import {
   Banner,
   Testimonials,
   MapLocation,
+  SectionWrapper,
 } from "../components";
-
-//import Card from "../components/Card.astro";
 ---
 
 <BaseLayout title="Hankook Alvillantas">
   <main>
-    <div class="wrapper-banner">
+    <div class="banner-wrapper">
       <img src="/public/initial-banner.webp" alt="banner hankook alvillantas" />
       <div class="text-absolute-item">
         <h1>La mejora calidad de NEUMÁTICOS A TU ALCANCE</h1>
       </div>
     </div>
 
-    <CarouselProducts />
+    <SectionWrapper>
+      <CarouselProducts />
+    </SectionWrapper>
 
-    <Banner />
+    <SectionWrapper>
+      <Banner />
+    </SectionWrapper>
 
-    <Testimonials />
+    <SectionWrapper>
+      <Testimonials />
+    </SectionWrapper>
 
-    <MapLocation />
+    <SectionWrapper>
+      <MapLocation />
+    </SectionWrapper>
   </main>
 </BaseLayout>
 
 <style lang="scss">
+  //MOBILE AND TABLET
   main {
-    .wrapper-banner {
+    .banner-wrapper {
       position: relative;
       display: flex;
       align-items: center;
       justify-content: start;
       img {
         width: 100%;
-        object-fit: contain;
+        height: 40vh;
+        object-fit: cover;
       }
       .text-absolute-item {
-        font-size: 0.7em;
+        font-size: 1.2em;
         max-width: 28em;
         padding: 2em 1em;
         position: absolute;
@@ -52,47 +61,12 @@ import {
     }
   }
 
-  @media (min-width: 576px) {
-    main {
-      .wrapper-banner {
-        .text-absolute-item {
-          font-size: 1em;
-        }
-      }
-    }
-  }
-
-  @media (min-width: 768px) {
-    main {
-      .wrapper-banner {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: start;
-        img {
-          width: 100%;
-          object-fit: contain;
-        }
-        .text-absolute-item {
-          margin-top: 2em;
-          font-size: 1.5em;
-          max-width: 28em;
-          padding: 2em 1em;
-          position: absolute;
-          color: #fff;
-          text-transform: uppercase;
-          font-style: italic;
-        }
-      }
-    }
-  }
-
+  //DESKTOP
   @media (min-width: 920px) {
     main {
-      .wrapper-banner {
+      .banner-wrapper {
         img {
           width: 100%;
-          object-fit: fill;
           height: 70vh;
         }
 
