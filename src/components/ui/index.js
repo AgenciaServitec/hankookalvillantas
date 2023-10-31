@@ -1,5 +1,6 @@
 //React components
 export { Form } from "./Form.jsx";
+export * from "./Input.jsx";
 
 //Astro components
 export { default as Button } from "./Button.astro";
