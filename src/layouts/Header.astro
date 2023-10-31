@@ -1,20 +1,27 @@
 ---
-import { Button, IconFontAwesome } from "../components";
 import Icon from "astro-icon";
+import { Button, IconFontAwesome } from "../components";
+import MenuButton from "./MenuButton"
 ---
 
-<header>
+
+
+<header >
   <div class="img-logo">
     <a href="/"
       ><img src="/public/logo.webp" alt="logo hankook alvillantas" /></a
     >
-    <button class="item-menu-button">
+
+    <MenuButton client:visible >
+      <div class="item-menu-button" >
       <IconFontAwesome
         width="30px"
         color="#fc4c09"
         path="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
       />
-    </button>
+      </div>
+    </MenuButton>
+
   </div>
 
   <div class="item-menu">
@@ -50,10 +57,7 @@ import Icon from "astro-icon";
         object-fit: contain;
       }
 
-      .item-menu-button {
-        border: none;
-        background: none;
-      }
+
     }
 
     .item-menu {
