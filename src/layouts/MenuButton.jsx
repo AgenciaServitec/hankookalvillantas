@@ -1,5 +1,4 @@
 import { useVisibleDrawer } from "../hooks/index.js";
-import { useEffect } from "react";
 
 const MenuButton = ({ children }) => {
   const { visibleDrawer, showDrawer, hiddenDrawer } = useVisibleDrawer();
