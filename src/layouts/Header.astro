@@ -23,7 +23,7 @@ import MenuButton from "./MenuButton";
 <header id="header-item" class="header-absolute">
   <div class="img-logo">
     <a href="/"
-      ><img src="/public/logo.webp" alt="logo hankook alvillantas" /></a
+    ><img src="/public/logo.webp" alt="logo hankook alvillantas" /></a
     >
     <MenuButton client:visible>
       <div class="item-menu-button">
@@ -41,10 +41,10 @@ import MenuButton from "./MenuButton";
       <li><a href="/about-us">Nosotros</a></li>
       <li><a href="/products">Productos</a></li>
       <li>
-        <Button>
+        <a href="/contact" class="anchor-icon">
           <Icon pack="mdi" name="phone" size={19} />
-           Contacto
-        </Button>
+          Contacto
+        </a>
       </li>
     </ul>
   </div>
@@ -86,8 +86,10 @@ import MenuButton from "./MenuButton";
       width: 100%;
       max-width: 1530px;
       margin: auto;
+
       .img-logo {
         display: initial;
+
         img {
           width: 11em;
           height: auto;
@@ -109,8 +111,23 @@ import MenuButton from "./MenuButton";
           display: flex;
           align-items: center;
           gap: 1em;
+
           li a {
             text-decoration: none;
+            color: #fff;
+          }
+
+          li .anchor-icon {
+            display: flex;
+            place-items: center;
+            gap: 0.2em;
+            padding: 0.7em 1.2em;
+            text-align: center;
+            border-radius: 7em;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            background-color: #fe4e02;
             color: #fff;
           }
         }
