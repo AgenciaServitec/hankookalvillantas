@@ -1,0 +1,88 @@
+---
+
+---
+
+<section>
+  <section class="options">
+    <span class="">¿Cómo quieres buscar tus neumáticos?</span>
+    <div>
+      <button>Por vehículo</button>
+      <button>Por medida de neumático</button>
+    </div>
+  </section>
+  <section class="section-filter">
+    <div class="section-filter__fields">
+      <div>
+        <label for="">Marca *</label>
+        <input class="section-filter__input" type="text" />
+      </div>
+      <div>
+        <label for="">Modelo *</label>
+        <input class="section-filter__input" type="text" />
+      </div>
+      <div>
+        <label for="">Año *</label>
+        <input class="section-filter__input" type="text" />
+      </div>
+      <div>
+        <label for="">Versión *</label>
+        <input class="section-filter__input" type="text" />
+      </div>
+      <div>
+        <label for="">Medida neumático *</label>
+        <input class="section-filter__input" type="text" />
+      </div>
+    </div>
+    <button class="section-filter__btn">Buscar</button>
+  </section>
+</section>
+
+<style lang="scss">
+  .section-filter {
+    max-width: 90%;
+    margin: 0 auto;
+    background-color: #454545;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    overflow: hidden;
+    @media (max-width: 1200px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 40px;
+    }
+    &__fields {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.5em;
+      padding: 0.5em;
+      @media (max-width: 1200px) {
+        grid-template-columns: 1fr;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.85em;
+        text-transform: uppercase;
+        font-style: italic;
+        font-weight: bold;
+        font-size: 0.85em;
+      }
+    }
+    &__input {
+      height: 40px;
+      border: none;
+      border-radius: 8px;
+      padding: 0 1em;
+    }
+    &__btn {
+      background-color: #fc4c09;
+      border: none;
+      font-size: 1.5em;
+      text-transform: uppercase;
+      font-style: italic;
+      font-weight: bold;
+      color: #fff;
+    }
+  }
+</style>
