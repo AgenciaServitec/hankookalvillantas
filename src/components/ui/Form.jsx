@@ -8,7 +8,12 @@ export const Form = ({ children, ...props }) => (
   <form noValidate autoComplete="off" {...props}>
     <div
       className="form-content"
-      style={{ display: "flex", flexDirection: "column", gap: "1em" }}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "1em",
+        alignItems: "center",
+      }}
     >
       {children}
     </div>
