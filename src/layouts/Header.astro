@@ -1,29 +1,40 @@
 ---
 import Icon from "astro-icon";
 import { Button, IconFontAwesome } from "../components";
-import MenuButton from "./MenuButton"
+import MenuButton from "./MenuButton";
 ---
 
+<script>
+  const headerElement = document.querySelector("#header-item");
 
+  const headerSticky = "header-sticky";
 
-<header >
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > 93) {
+      headerElement.classList.add(headerSticky);
+    } else {
+      headerElement.classList.remove(headerSticky);
+    }
+  });
+</script>
+
+<header id="header-item" class="header-absolute">
   <div class="img-logo">
     <a href="/"
       ><img src="/public/logo.webp" alt="logo hankook alvillantas" /></a
     >
-
-    <MenuButton client:visible >
-      <div class="item-menu-button" >
-      <IconFontAwesome
-        width="30px"
-        color="#fc4c09"
-        path="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
-      />
+    <MenuButton client:visible>
+      <div class="item-menu-button">
+        <IconFontAwesome
+          width="30px"
+          color="#fc4c09"
+          path="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+        />
       </div>
     </MenuButton>
-
   </div>
-
   <div class="item-menu">
     <ul>
       <li><a href="/">Inicio</a></li>
@@ -41,7 +52,7 @@ import MenuButton from "./MenuButton"
 
 <style lang="scss">
   //MOBILE AND TABLET
-  header {
+  .header-absolute {
     width: 100%;
     height: auto;
 
@@ -56,8 +67,6 @@ import MenuButton from "./MenuButton"
         height: auto;
         object-fit: contain;
       }
-
-
     }
 
     .item-menu {
@@ -67,16 +76,16 @@ import MenuButton from "./MenuButton"
 
   //DESKTOP
   @media (min-width: 920px) {
-    header {
+    .header-absolute {
+      position: absolute;
+      top: 0;
+      z-index: 700;
       display: flex;
       justify-content: space-between;
       padding: 1em;
-      position: fixed;
-      top: 0;
-      z-index: 700;
+      width: 100%;
       max-width: 1530px;
       margin: auto;
-
       .img-logo {
         display: initial;
         img {
@@ -106,6 +115,24 @@ import MenuButton from "./MenuButton"
           }
         }
       }
+    }
+  }
+
+  .header-absolute.header-sticky {
+    position: fixed;
+    z-index: 700;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0.2em 1em;
+    backdrop-filter: blur(10px);
+    animation: slideDown 0.35s ease-out;
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
     }
   }
 </style>
