@@ -41,7 +41,11 @@ const MenuButton = ({ children }) => {
               path="/products"
               onHiddenDrawer={hiddenDrawer}
             />
-            <ItemLi text="Contacto" onHiddenDrawer={hiddenDrawer} />
+            <ItemLi
+              text="Contacto"
+              path="/contact"
+              onHiddenDrawer={hiddenDrawer}
+            />
           </ul>
         </article>
       </section>
