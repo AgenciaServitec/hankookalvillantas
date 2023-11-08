@@ -6,6 +6,7 @@ import {
   Testimonials,
   MapLocation,
   SectionWrapper,
+  Title,
 } from "../components";
 import FilterProducts from "../components/home/FilterProducts.astro";
 ---
@@ -15,11 +16,10 @@ import FilterProducts from "../components/home/FilterProducts.astro";
     <div class="banner-wrapper">
       <img src="/public/initial-banner.webp" alt="banner hankook alvillantas" />
       <div class="text-absolute-item">
-        <h1>La mejor calidad de NEUMÁTICOS A TU ALCANCE</h1>
+        <Title title="Busca y encuentra">tus productos</Title>
       </div>
+      <FilterProducts />
     </div>
-
-    <FilterProducts />
 
     <SectionWrapper>
       <CarouselProducts />
@@ -50,10 +50,11 @@ import FilterProducts from "../components/home/FilterProducts.astro";
         object-fit: cover;
       }
       .text-absolute-item {
-        font-size: 1.2em;
-        max-width: 28em;
+        margin: 0 auto;
         padding: 2em 1em;
         position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
         color: #fff;
         text-transform: uppercase;
         font-style: italic;
@@ -68,10 +69,6 @@ import FilterProducts from "../components/home/FilterProducts.astro";
         img {
           width: 100%;
           height: 70vh;
-        }
-
-        .text-absolute-item {
-          font-size: 2em;
         }
       }
     }
