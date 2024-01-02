@@ -15,6 +15,7 @@ export const Input = ({
         border: "none",
         outline: "none",
         fontSize: "1em",
+        fontFamily: "system-ui, sans-serif",
       }}
       {...props}
     />

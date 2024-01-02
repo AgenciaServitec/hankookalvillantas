@@ -11,6 +11,7 @@ export const Textarea = ({ placeholder = "Escribe mensaje", ...props }) => {
         outline: "none",
         fontSize: "1em",
         minHeight: "5em",
+        fontFamily: "system-ui, sans-serif",
       }}
       {...props}
     ></textarea>
