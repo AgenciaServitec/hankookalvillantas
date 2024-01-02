@@ -1,0 +1,70 @@
+---
+import FilterInput from "./FilterInput.astro";
+---
+
+<script>
+  document.querySelector("#filter-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    console.log("hola");
+  });
+</script>
+
+<form class="section-filter" id="filter-form" method="post">
+  <div class="section-filter__fields">
+    <FilterInput type="text" name="brand" label="Marca" required={true} />
+    <FilterInput type="text" name="model" label="Modelo" required={true} />
+    <FilterInput type="text" name="year" label="Año" required={true} />
+    <FilterInput type="text" name="version" label="Versión" required={true} />
+    <FilterInput
+      type="text"
+      name="extent"
+      label="Medida neumatico"
+      required={true}
+    />
+  </div>
+  <button class="section-filter__btn" type="submit" id="btn">Buscar</button>
+</form>
+
+<style lang="scss">
+  .section-filter {
+    padding: 0.5em;
+    background-color: #454545;
+    border: 2px solid #fff;
+    border-radius: 1em;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @media (min-width: 600px) {
+      grid-template-columns: 1fr auto;
+    }
+    &__fields {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.5em;
+      padding: 0.5em;
+
+      @media (min-width: 600px) {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        align-items: end;
+      }
+    }
+    &__btn {
+      background-color: #fc4c09;
+      border: none;
+      cursor: pointer;
+      font-size: 1.5em;
+      width: 100%;
+      min-width: 6em;
+      border-radius: 0.5em;
+      padding: 0.5em;
+      text-transform: uppercase;
+      font-style: italic;
+      font-weight: bold;
+      color: #fff;
+
+      @media (min-width: 600px) {
+        border-radius: 0 0.5em 0.5em 0;
+      }
+    }
+  }
+</style>

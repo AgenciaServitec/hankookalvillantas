@@ -1,0 +1,36 @@
+---
+interface Props {
+  name: string;
+  label: string;
+  type: string;
+  required: boolean;
+}
+
+const { name, label, required = false, type = "text" } = Astro.props;
+---
+
+<label for={name}>
+  {label}
+  {required && "*"}
+  <input class="section-filter__input" type={type} name={name} id={name} />
+</label>
+
+<style>
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 0.89em;
+
+    input {
+      border: none;
+      outline: none;
+      height: 40px;
+      border-radius: 8px;
+      padding: 0 1em;
+    }
+  }
+</style>
