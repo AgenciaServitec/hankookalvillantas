@@ -3,13 +3,13 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import ContactForm from "./ContactForm";
 ---
 
-<BaseLayout>
+<BaseLayout title="Contacto">
   <main>
     <section>
       <span>Contacto</span>
 
       <div style="margin-top: 4em">
-        <ContactForm client:visible />
+        <ContactForm client:visible transition:persist />
       </div>
     </section>
   </main>
