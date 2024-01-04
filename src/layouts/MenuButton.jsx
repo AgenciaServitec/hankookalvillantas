@@ -21,7 +21,7 @@ const MenuButton = ({ children }) => {
           top: "0",
           right: "0",
           background: "rgba(0,0,0,0.8)",
-          transition: "all 0.3s ease-in-out ",
+          transition: "all 0.2s ease-in-out ",
           transform: visibleDrawer ? " translateX(0%)" : " translateX(100%)",
           display: "grid",
           gridTemplateColumns: "25% 1fr",
@@ -57,13 +57,15 @@ export default MenuButton;
 
 const ItemLi = ({ text, path = "/", onHiddenDrawer }) => (
   <li
-    style={{ padding: "0.3em 0", fontSize: "1.5em" }}
+    style={{ padding: "0.5em 0", fontSize: "1.5em" }}
     onClick={onHiddenDrawer}
   >
     <a
       href={path}
       style={{
         textDecoration: "none",
+        fontSize: "1.2em",
+        fontWeight: 700,
       }}
       className="color__primary"
     >
