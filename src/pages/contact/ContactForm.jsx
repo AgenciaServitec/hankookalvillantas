@@ -1,6 +1,4 @@
-import { useEffect } from "react";
 import { ButtonJsx, Form, Input, Textarea } from "../../components/ui";
-
 import { useFormNative } from "../../hooks";
 
 const initialForm = {
@@ -11,17 +9,14 @@ const initialForm = {
 };
 
 const ContactForm = () => {
-  const { errorMsg, formData, handleChange, isFormValid, validateInput } =
-    useFormNative({
-      initialForm,
-    });
+  const { errors, formData, handleChange, validateInput } = useFormNative({
+    initialForm,
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    validateInput();
-
-    if (!isFormValid(errorMsg)) return;
+    if (!validateInput()) return;
 
     console.log("formData->", formData);
   };
@@ -31,36 +26,31 @@ const ContactForm = () => {
       <Input
         type="text"
         name="firstName"
-        value={formData.firstName}
         placeholder="Ingrese Nombres"
+        formData={formData}
         onChange={handleChange}
-        error={errorMsg?.firstName}
-        errorMsg={errorMsg?.firstName?.error}
+        error={errors}
       />
       <Input
         type="mail"
         name="email"
-        value={formData.email}
+        formData={formData}
         onChange={handleChange}
         placeholder="Ingrese email"
-        error={errorMsg?.email}
-        errorMsg={errorMsg?.email?.error}
+        error={errors}
       />
       <Input
         type="number"
         name="phoneNumber"
-        value={formData.phoneNumber}
+        formData={formData}
         onChange={handleChange}
         placeholder="Ingrese teléfono"
-        error={errorMsg?.phoneNumber}
-        errorMsg={errorMsg?.phoneNumber?.error}
+        error={errors}
       />
       <Textarea
         name="message"
         value={formData.message}
         onChange={handleChange}
-        error={errorMsg?.message}
-        errorMsg={errorMsg?.message?.error}
       />
 
       <ButtonJsx type="submit">Enviar</ButtonJsx>

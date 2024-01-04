@@ -1,9 +1,8 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 export const useFormNative = ({ initialForm = {} }) => {
   const [formData, setFormData] = useState(initialForm);
-  const [errorMsg, setErrorMsg] = useState({});
-  const isFirstRender = useRef(true);
+  const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
     const { value, name } = e.target;
@@ -11,40 +10,35 @@ export const useFormNative = ({ initialForm = {} }) => {
   };
 
   const validateInput = () => {
-    for (let value in formData) {
-      if (formData[value].trim().length === 0) {
-        const errorObject = { [value]: { error: "Completar campos" } };
+    let valid = true;
+    const newErrors = {};
 
-        setErrorMsg((prevState) => ({ ...prevState, ...errorObject }));
-      } else {
-        setErrorMsg((prevState) => {
-          delete prevState[value];
-          const newState = { ...prevState };
-
-          return newState;
-        });
-      }
-    }
-  };
-
-  const isFormValid = (errorState) => {
-    return Object.keys(errorState).length === 0;
-  };
-
-  useEffect(() => {
-    if (isFirstRender.current) {
-      isFirstRender.current = false;
-      return;
+    // Validar el campo de nombre de usuario
+    if (formData.firstName.trim() === "") {
+      newErrors.firstName = "El nombre de usuario es requerido";
+      valid = false;
     }
 
-    validateInput();
-  }, [formData]);
+    // Validar el campo de correo electrónico
+    if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
+      newErrors.email = "El correo electrónico no es válido";
+      valid = false;
+    }
+
+    // Validar el campo del numero
+    if (formData.phoneNumber.length < 6) {
+      newErrors.phoneNumber = "El telefono debe tener al menos 6 caracteres";
+      valid = false;
+    }
+
+    setErrors(newErrors);
+    return valid;
+  };
 
   return {
     formData,
-    errorMsg,
+    errors,
     handleChange,
     validateInput,
-    isFormValid,
   };
 };
