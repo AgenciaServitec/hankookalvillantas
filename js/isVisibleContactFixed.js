@@ -1,4 +1,5 @@
 const elmentItemVisibleForm = document.querySelector("#item-open-form");
+const elmentItemVisibleForm2 = document.querySelector("#item-open-form-2");
 const elementItemIconCloseForm = document.querySelector(
   "#item-icon-close-form"
 );
@@ -20,12 +21,15 @@ const isVisibleFormContactFx = (isVisibleForm = false) => {
 };
 
 // initial form contact
-isVisibleFormContactFx();
+
+isVisibleFormContactFx(window.location.href.includes("contacto"))
+
 
 // events onClicks
 elmentItemVisibleForm.addEventListener("click", () => {
   isVisibleFormContactFx(true);
 });
+
 
 elementItemIconCloseForm.addEventListener("click", () => {
   isVisibleFormContactFx(false);

@@ -1,4 +1,4 @@
 {
-  "apiUrl": "https://us-central1-alvillantas.cloudfunctions.net/api",
+  "apiUrl": "https://api-servitecsales.web.app",
   "ipInfoApi": "https://ipinfo.io/json?token=09c720dcbb804f"
 }

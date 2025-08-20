@@ -25,9 +25,8 @@ const validateFormContactFx = async (e) => {
       (element) => element.value
     );
     
-    const userIpInfo = await fetchUserIpInfo();
 
-    const formData =  mapContactFx(elementsFormFixedValues,userIpInfo);
+    const formData =  mapContactFx(elementsFormFixedValues);
 
     const response = await fetchSendEmail(formData);
 
@@ -48,13 +47,14 @@ const validateFormContactFx = async (e) => {
   }
 };
 
-const mapContactFx = (elementsFormFixedValues,userIpInfo) => ({
+const mapContactFx = (elementsFormFixedValues) => ({
   firstName: elementsFormFixedValues[0],
   lastName: elementsFormFixedValues[1],
   email: elementsFormFixedValues[2],
-  phoneNumber: elementsFormFixedValues[3] || null,
-  issue: elementsFormFixedValues[4],
-  message: elementsFormFixedValues[5],
-  additionalInfo: userIpInfo || null,
+  phone: {
+    countryCode:"+51",
+    number:elementsFormFixedValues[3] || null,
+  },
+  message: elementsFormFixedValues[4],
   hostname: window.location.hostname || "hankookalvillantas.com",
 });

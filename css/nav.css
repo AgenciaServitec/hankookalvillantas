@@ -1,0 +1,36 @@
+:root{
+    --color-orange: #fe4e02;
+}
+
+.navbar{
+    padding: 1em 2em;
+}
+
+.section-about{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    margin: 1,5em 0;
+    padding: 2em 0;
+}
+
+.section-about p{
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #000;
+    line-height: 1.6em
+    
+}
+
+.list-contact .list-default li p{
+    font-size: 1.2em;
+}
+
+@media (min-width: 768px) {
+    
+     .section-about{
+        grid-template-columns: 1fr 1fr;
+        margin: 1,5em 0;
+
+    }
+}
