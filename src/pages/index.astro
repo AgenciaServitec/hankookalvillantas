@@ -2,6 +2,9 @@
 import FilterProducts from "../components/home/FilterProducts.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Title from "../components/ui/Title.astro";
+import HowToBuy from "../sections/HowToBuy.astro";
+import CTA from "../sections/CTA.astro";
+import MapLocation from "../components/home/MapLocation.astro";
 ---
 
 <BaseLayout title="Hankook Alvillantas">
@@ -12,4 +15,10 @@ import Title from "../components/ui/Title.astro";
     </div>
     <FilterProducts />
   </div>
+
+  <HowToBuy />
+
+  <CTA />
+
+  <MapLocation />
 </BaseLayout>
