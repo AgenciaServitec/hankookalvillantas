@@ -1,40 +1,69 @@
----
+<section class="bg-black py-16">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="bg-surface rounded-2xl p-8 shadow-lg">
+      <!-- TITLE -->
+      <h2 class="text-white text-xl font-bold mb-2">
+        Busca y encuentra tus productos
+      </h2>
 
----
+      <p class="text-gray-400 mb-6">
+        ¿Cómo quieres buscar tus neumáticos?
+      </p>
 
-<section class="filter">
-  <section class="options-filter">
-    <h2 class="options-filter__title">¿Cómo quieres buscar tus neumáticos?</h2>
-    <div class="options-filter__btns">
-      <button class="options-filter__btn options-filter__btn--active">
-        Por vehículo</button
+      <!-- OPTIONS -->
+      <div class="flex gap-4 mb-8">
+        <button
+          class="px-4 py-2 rounded-lg bg-orange-600 text-white font-semibold"
+        >
+          Por vehículo
+        </button>
+
+        <button
+          class="px-4 py-2 rounded-lg bg-zinc-800 text-gray-300 hover:bg-zinc-700"
+        >
+          Por medida de neumático
+        </button>
+      </div>
+
+      <!-- FORM -->
+      <div class="grid md:grid-cols-5 gap-4 mb-6">
+        <input
+          type="text"
+          placeholder="Marca *"
+          class="bg-surface-alt text-white px-4 py-3 rounded-lg outline-none focus:ring-2 focus:ring-orange-600"
+        />
+
+        <input
+          type="text"
+          placeholder="Modelo *"
+          class="bg-surface-alt text-white px-4 py-3 rounded-lg outline-none focus:ring-2 focus:ring-orange-600"
+        />
+
+        <input
+          type="text"
+          placeholder="Año *"
+          class="bg-surface-alt text-white px-4 py-3 rounded-lg outline-none focus:ring-2 focus:ring-orange-600"
+        />
+
+        <input
+          type="text"
+          placeholder="Versión *"
+          class="bg-surface-alt text-white px-4 py-3 rounded-lg outline-none focus:ring-2 focus:ring-orange-600"
+        />
+
+        <input
+          type="text"
+          placeholder="Medida neumático *"
+          class="bg-surface-alt text-white px-4 py-3 rounded-lg outline-none focus:ring-2 focus:ring-orange-600"
+        />
+      </div>
+
+      <!-- ACTION -->
+      <button
+        class="bg-orange-600 hover:bg-orange-700 text-white font-bold px-8 py-3 rounded-lg transition"
       >
-      <button class="options-filter__btn"> Por medida de neumático</button>
+        Buscar
+      </button>
     </div>
-  </section>
-  <section class="section-filter">
-    <div class="section-filter__fields">
-      <div>
-        <label for="">Marca *</label>
-        <input class="section-filter__input" type="text" />
-      </div>
-      <div>
-        <label for="">Modelo *</label>
-        <input class="section-filter__input" type="text" />
-      </div>
-      <div>
-        <label for="">Año *</label>
-        <input class="section-filter__input" type="text" />
-      </div>
-      <div>
-        <label for="">Versión *</label>
-        <input class="section-filter__input" type="text" />
-      </div>
-      <div>
-        <label for="">Medida neumático *</label>
-        <input class="section-filter__input" type="text" />
-      </div>
-    </div>
-    <button class="section-filter__btn">Buscar</button>
-  </section>
+  </div>
 </section>
