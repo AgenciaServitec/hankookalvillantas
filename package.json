@@ -10,15 +10,17 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/react": "^3.0.7",
-    "astro": "^4.0.6",
+    "@astrojs/react": "^4.4.2",
+    "@fontsource/inter": "^5.2.8",
+    "@tailwindcss/vite": "^4.1.18",
+    "astro": "^5.16.15",
     "astro-icon": "^0.8.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
     "prettier": "^3.0.3",
-    "prettier-plugin-astro": "^0.12.3",
-    "sass": "^1.69.4"
+    "prettier-plugin-astro": "^0.12.3"
   }
 }
