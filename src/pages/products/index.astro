@@ -1,8 +1,16 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import Title from "../../components/ui/Title.astro";
+import SidebarFilters from "../../components/products/SidebarFilters.astro";
+import ProductsList from "../../components/products/ProductsList.astro";
 ---
 
-<BaseLayout title="Productos">
-  <Title title="NUESTROS">PRODUCTOS</Title>
+<BaseLayout title="Productos - Llantas">
+  <section class="bg-black py-10 min-h-screen">
+    <div
+      class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-8"
+    >
+      <SidebarFilters />
+      <ProductsList />
+    </div>
+  </section>
 </BaseLayout>

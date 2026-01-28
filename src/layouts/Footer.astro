@@ -4,15 +4,40 @@ import ContentWidth from "../components/ui/ContentWidth.astro";
 <footer class="bg-surface text-gray-300">
   <ContentWidth>
     <div class="py-14 grid md:grid-cols-3 gap-10">
+
       <!-- INFO -->
       <div>
-        <img src="/logo.webp" class="h-10 mb-4" />
+        <img src="/images/logo.webp" class="h-10 mb-4" />
+
         <p class="text-sm leading-relaxed">
           Brindamos atención empática y profesional. Garantizamos nuestros
           productos y servicios.
         </p>
-      </div>
 
+        <!-- BOTÓN WHATSAPP -->
+        <a
+          href="https://api.whatsapp.com/send?phone=51967787227&text=Hola,%20quiero%20cotizar%20llantas"
+          target="_blank"
+          rel="noopener"
+          class="mt-4 inline-flex items-center justify-center gap-2 w-full
+                 bg-red-600 hover:bg-red-700
+                 text-white font-semibold py-3 rounded-lg
+                 transition-colors duration-300"
+        >
+          <!-- ICONO WHATSAPP -->
+          <svg
+            class="w-5 h-5"
+            viewBox="0 0 448 512"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M380.9 97.1C339-3.1 214.8-33.7 123.6 18.7 32.4 71.1-8.1 192.1 35.7 288.3L0 416l132.1-34.7c91.6 49.5 206.5 17.9 254.6-73.4 48.1-91.3 11.4-205.1-75.8-259.8z"
+            />
+          </svg>
+          <span>Cotizar por WhatsApp</span>
+        </a>
+      </div>
 
       <!-- CONTACTO -->
       <div>
@@ -20,61 +45,69 @@ import ContentWidth from "../components/ui/ContentWidth.astro";
 
         <ul class="space-y-3 text-sm">
           <li class="flex items-center gap-3">
-            <img
-              src="/svg/phone.svg"
-              alt="Teléfono"
-              class="w-4 h-4"
-            />
+            <img src="/svg/phone.svg" class="w-4 h-4" />
             <span>967787227</span>
           </li>
 
           <li class="flex items-center gap-3">
-            <img
-              src="/svg/email.svg"
-              alt="Email"
-              class="w-4 h-4"
-            />
+            <img src="/svg/email.svg" class="w-4 h-4" />
             <span>ventas3@hankookalvillantas.com</span>
           </li>
 
           <li class="flex items-center gap-3">
-            <img
-              src="/svg/location.svg"
-              alt="Ubicación"
-              class="w-4 h-4"
-            />
+            <img src="/svg/location.svg" class="w-4 h-4" />
             <span>Lima Metropolitana</span>
           </li>
 
           <li class="flex items-center gap-3">
-            <img
-              src="/svg/time.svg"
-              alt="Horario"
-              class="w-4 h-4"
-            />
+            <img src="/svg/time.svg" class="w-4 h-4" />
             <span>Lun–Vie: 09:00 – 19:00</span>
           </li>
         </ul>
-      </div>
 
+        <!-- CARD EMPRESA -->
+        <div class="mt-5 bg-surface-alt border border-white/10 rounded-xl p-5">
+          <p class="text-white font-semibold">
+            ALVILLANTAS E.I.R.L
+          </p>
+          <p class="text-sm text-gray-300 mt-1">
+            RUC: 20550856337
+          </p>
+        </div>
+      </div>
 
       <!-- LINKS -->
       <div>
         <h3 class="text-white font-bold mb-4">Información</h3>
         <ul class="space-y-2 text-sm">
-          <li><a href="/about" class="hover:text-orange-500">Nosotros</a></li>
-          <li><a href="/products" class="hover:text-orange-500">Productos</a></li>
-          <li><a href="/contact" class="hover:text-orange-500">Contacto</a></li>
-          <li><a href="/terms" class="hover:text-orange-500">Términos</a></li>
+          <li>
+            <a href="/about" class="hover:text-red-500 transition">
+              Nosotros
+            </a>
+          </li>
+          <li>
+            <a href="/products" class="hover:text-red-500 transition">
+              Productos
+            </a>
+          </li>
+          <li>
+            <a href="/contact" class="hover:text-red-500 transition">
+              Contacto
+            </a>
+          </li>
+          <li>
+            <a href="/terms" class="hover:text-red-500 transition">
+              Términos
+            </a>
+          </li>
         </ul>
       </div>
+
     </div>
-
-    <!-- COPYRIGHT -->
-
   </ContentWidth>
 
   <div class="border-t border-white/10 text-center text-sm py-5">
-    © 2026 Hankook Alvillantas. Todos los derechos reservados. Desarrollado por Servitec Peru.
+    © 2026 Alvillantas E.I.R.L. Todos los derechos reservados.
+    Desarrollado por Servitec Peru.
   </div>
 </footer>
