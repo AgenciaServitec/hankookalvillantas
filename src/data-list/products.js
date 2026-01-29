@@ -1,54 +1,11 @@
+import autos from "./autos";
+import camionetas from "./camionetas";
+import camion from "./camion";
+
 const products = [
-  {
-    id: 1,
-    brand: "continental",
-    vehicleType: "auto",
-    name: "Sportiva Radial AT Continental TL",
-    size: "215/75 R14",
-    load: "800",
-    speed: "160 Km/h",
-    image: "/images/products/continental-215-75-r14.webp",
-  },
-  {
-    id: 2,
-    brand: "continental",
-    vehicleType: "auto",
-    name: "PowerContact TX Continental TL",
-    size: "195/65 R15",
-    load: "615",
-    speed: "210 Km/h",
-    image: "/images/products/continental-195-65-r15.webp",
-  },
-  {
-    id: 3,
-    brand: "hankook",
-    vehicleType: "camioneta",
-    name: "Dynapro AT2 RF11 Hankook",
-    size: "205/55 R16",
-    load: "670",
-    speed: "190 Km/h",
-    image: "/images/products/hankook-205-55-r16.webp",
-  },
-  {
-    id: 4,
-    brand: "goodyear",
-    vehicleType: "auto",
-    name: "EfficientGrip Performance",
-    size: "205/55 R16",
-    load: "615",
-    speed: "210 Km/h",
-    image: "/images/products/goodyear-205-55-r16.webp",
-  },
-  {
-    id: 5,
-    brand: "pirelli",
-    vehicleType: "camion",
-    name: "Scorpion ATR Pirelli",
-    size: "205/75 R15",
-    load: "900",
-    speed: "170 Km/h",
-    image: "/images/products/pirelli-205-75-r15.webp",
-  },
+  ...autos,
+  ...camionetas,
+  ...camion,
 ];
 
 export default products;
