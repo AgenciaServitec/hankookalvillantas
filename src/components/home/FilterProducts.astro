@@ -1,40 +1,113 @@
----
+<section class="bg-black py-16">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="bg-surface rounded-2xl p-8 shadow-lg">
 
----
+      <!-- TÍTULO -->
+      <h2 class="text-white text-xl font-bold mb-1">
+        Busca y encuentra tus productos
+      </h2>
 
-<section class="filter">
-  <section class="options-filter">
-    <h2 class="options-filter__title">¿Cómo quieres buscar tus neumáticos?</h2>
-    <div class="options-filter__btns">
-      <button class="options-filter__btn options-filter__btn--active">
-        Por vehículo</button
+      <p class="text-gray-400 mb-6">
+        ¿Cómo quieres buscar tus neumáticos?
+      </p>
+
+      <!-- TOGGLE -->
+      <div class="flex gap-4 mb-8">
+        <button
+          id="btn-vehiculo"
+          class="px-4 py-2 rounded-lg bg-red-600 text-white font-semibold transition-colors"
+        >
+          Por vehículo
+        </button>
+
+        <button
+          id="btn-medida"
+          class="px-4 py-2 rounded-lg bg-surface-alt text-gray-300 hover:bg-zinc-700 transition-colors"
+        >
+          Por medida de neumático
+        </button>
+      </div>
+
+      <!-- FORM VEHÍCULO -->
+      <div
+        id="form-vehiculo"
+        class="grid md:grid-cols-4 gap-4 mb-6"
       >
-      <button class="options-filter__btn"> Por medida de neumático</button>
+        <input
+          type="text"
+          placeholder="Marca *"
+          class="bg-surface-alt text-white px-4 py-3 rounded-lg outline-none
+                 focus:ring-2 focus:ring-red-600"
+        />
+
+        <input
+          type="text"
+          placeholder="Modelo *"
+          class="bg-surface-alt text-white px-4 py-3 rounded-lg outline-none
+                 focus:ring-2 focus:ring-red-600"
+        />
+
+        <input
+          type="text"
+          placeholder="Año *"
+          class="bg-surface-alt text-white px-4 py-3 rounded-lg outline-none
+                 focus:ring-2 focus:ring-red-600"
+        />
+
+        <input
+          type="text"
+          placeholder="Versión *"
+          class="bg-surface-alt text-white px-4 py-3 rounded-lg outline-none
+                 focus:ring-2 focus:ring-red-600"
+        />
+      </div>
+
+      <!-- FORM MEDIDA -->
+      <div id="form-medida" class="hidden mb-6">
+        <input
+          type="text"
+          placeholder="Ej: 205/55 R16 *"
+          class="w-full bg-surface-alt text-white px-4 py-3 rounded-lg outline-none
+                 focus:ring-2 focus:ring-red-600"
+        />
+      </div>
+
+      <!-- BOTÓN BUSCAR -->
+      <button
+        class="bg-red-600 hover:bg-red-700 text-white font-bold
+               px-8 py-3 rounded-lg transition-colors"
+      >
+        Buscar
+      </button>
     </div>
-  </section>
-  <section class="section-filter">
-    <div class="section-filter__fields">
-      <div>
-        <label for="">Marca *</label>
-        <input class="section-filter__input" type="text" />
-      </div>
-      <div>
-        <label for="">Modelo *</label>
-        <input class="section-filter__input" type="text" />
-      </div>
-      <div>
-        <label for="">Año *</label>
-        <input class="section-filter__input" type="text" />
-      </div>
-      <div>
-        <label for="">Versión *</label>
-        <input class="section-filter__input" type="text" />
-      </div>
-      <div>
-        <label for="">Medida neumático *</label>
-        <input class="section-filter__input" type="text" />
-      </div>
-    </div>
-    <button class="section-filter__btn">Buscar</button>
-  </section>
+  </div>
 </section>
+
+<script>
+  const btnVehiculo = document.getElementById("btn-vehiculo");
+  const btnMedida = document.getElementById("btn-medida");
+  const formVehiculo = document.getElementById("form-vehiculo");
+  const formMedida = document.getElementById("form-medida");
+
+  btnVehiculo.addEventListener("click", () => {
+    formVehiculo.classList.remove("hidden");
+    formMedida.classList.add("hidden");
+
+    btnVehiculo.classList.add("bg-red-600", "text-white");
+    btnVehiculo.classList.remove("bg-surface-alt", "text-gray-300");
+
+    btnMedida.classList.remove("bg-red-600", "text-white");
+    btnMedida.classList.add("bg-surface-alt", "text-gray-300");
+  });
+
+  btnMedida.addEventListener("click", () => {
+    formVehiculo.classList.add("hidden");
+    formMedida.classList.remove("hidden");
+
+    btnMedida.classList.add("bg-red-600", "text-white");
+    btnMedida.classList.remove("bg-surface-alt", "text-gray-300");
+
+    btnVehiculo.classList.remove("bg-red-600", "text-white");
+    btnVehiculo.classList.add("bg-surface-alt", "text-gray-300");
+  });
+</script>

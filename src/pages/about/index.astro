@@ -1,21 +1,84 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import BrandsGrid from "../../pages/brands/BrandsGrid.astro";
 ---
 
 <BaseLayout title="Nosotros">
-  <section class="about-us">
-    <div class="about-us__img">
-      <img src="/images/nosotros.webp" alt="Sobre nosotros" />
+  <!-- SOBRE NOSOTROS -->
+  <section class="bg-black py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="bg-surface rounded-2xl shadow-lg overflow-hidden">
+        <div class="grid md:grid-cols-2 gap-8 items-center p-8">
+          <img
+            src="/images/nosotros.webp"
+            alt="Sobre nosotros"
+            class="w-full h-full object-cover rounded-xl"
+          />
+
+          <div>
+            <span class="text-red-500 font-semibold uppercase tracking-wide">
+              Hankook Alvillantas
+            </span>
+
+            <h2 class="text-white text-3xl font-bold mt-2 mb-4">
+              Sobre nosotros
+            </h2>
+
+            <p class="text-gray-300 leading-relaxed">
+              En Alvillantas, nos enorgullece ofrecer una amplia variedad de
+              opciones para asegurarnos de que encuentres el neumático perfecto
+              para tu vehículo. Cualquiera que sea su presupuesto y el tamaño de
+              automóvil que esté buscando, estamos seguros de que podemos
+              ayudarlo a encontrar la opción adecuada para usted.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="about-us__text">
-      <h2 class="about-us__text-title">Sobre nosotros</h2>
-      <p class="about-us__text-description">
-        En Alvillantas, nos enorgullece ofrecer una amplia variedad de opciones
-        para asegurarnos de que encuentres el neumático perfecto para tu
-        vehículo. Cualquiera que sea su presupuesto y el tamaño de automóvil que
-        esté buscando, estamos seguros de que podemos ayudarlo a encontrar lo
-        que sea adecuado para usted.
-      </p>
+  </section>
+
+  <!-- MISION & VISION -->
+  <section class="bg-black py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-surface rounded-2xl p-8 shadow-lg">
+          <h3 class="text-white text-2xl font-bold mb-4">Misión</h3>
+          <p class="text-gray-300 leading-relaxed">
+            Garantizar productos de calidad junto con una atención empática y
+            profesional de manera completa en todos nuestros servicios,
+            brindando una experiencia distinta y una solución inmediata a
+            nuestros clientes.
+          </p>
+        </div>
+
+        <div class="bg-surface rounded-2xl p-8 shadow-lg">
+          <h3 class="text-white text-2xl font-bold mb-4">Visión</h3>
+          <p class="text-gray-300 leading-relaxed">
+            Ser la compañía automotriz elegida por el excelente servicio,
+            calidad de producto y solución brindada.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARCAS -->
+  <section class="bg-black py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between mb-10">
+        <h2 class="text-white text-3xl font-bold">
+          Nuestras marcas
+        </h2>
+
+        <a
+          href="/brands"
+          class="text-red-500 hover:text-red-400 font-semibold"
+        >
+          Ver todas →
+        </a>
+      </div>
+
+      <BrandsGrid />
     </div>
   </section>
 </BaseLayout>

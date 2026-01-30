@@ -1,0 +1,84 @@
+---
+import ProductCard from "./ProductCard.astro";
+import products from "../../data-list/products";
+
+const { searchParams } = Astro.url;
+
+const brandFilter = searchParams.get("brand");
+const vehicleFilter = searchParams.get("vehicle");
+
+// FILTRAR PRODUCTOS (SOLO UNO ACTIVO)
+const filteredProducts = products.filter((product) => {
+  if (brandFilter) {
+    return product.brand === brandFilter;
+  }
+
+  if (vehicleFilter) {
+    return product.vehicleType === vehicleFilter;
+  }
+
+  return true;
+});
+
+// MENSAJE DE FILTRO
+let filterMessage = "";
+if (brandFilter) {
+  filterMessage = `la marca "${brandFilter}"`;
+} else if (vehicleFilter) {
+  filterMessage = `el tipo de vehículo "${vehicleFilter}"`;
+}
+---
+
+<div class="space-y-6">
+  <h2 class="text-white text-xl font-bold">
+    Busca tu llanta
+  </h2>
+
+  {
+    filteredProducts.length === 0 ? (
+      <!-- ESTADO VACÍO -->
+      <div class="bg-surface rounded-xl p-10 text-center">
+        <div class="mb-4">
+          <svg
+            class="w-16 h-16 mx-auto text-gray-500"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+        </div>
+
+        <p class="text-white text-lg font-semibold mb-2">
+          No se encontraron resultados
+        </p>
+
+        <p class="text-gray-400 text-sm mb-6">
+          {filterMessage
+            ? `No hay llantas disponibles para ${filterMessage}.`
+            : "No hay llantas disponibles para los filtros seleccionados."}
+        </p>
+
+        <a
+          href="/products"
+          class="inline-block px-6 py-2 bg-red-600 hover:bg-red-700
+                 text-white font-semibold rounded-lg transition-colors"
+        >
+          Limpiar filtro
+        </a>
+      </div>
+    ) : (
+      <!-- LISTADO -->
+      <div class="space-y-6">
+        {filteredProducts.map((product) => (
+          <ProductCard product={product} />
+        ))}
+      </div>
+    )
+  }
+</div>
