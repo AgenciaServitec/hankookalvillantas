@@ -1,76 +1,79 @@
 ---
 import ContentWidth from "../ui/ContentWidth.astro";
+
 const address = "Av. de la Marina Nro. 3410 - San Miguel - Lima";
 ---
 
-<section class="bg-surface border-y border-border">
+<section class="bg-surface border-y border-white/10">
   <ContentWidth>
     <div class="py-16">
-      <h2 class="text-2xl md:text-3xl font-semibold text-foreground">
+
+      <h2 class="text-2xl md:text-3xl font-semibold text-white">
         Nuestra Ubicación
       </h2>
 
       <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-        <div
-          class="rounded-3xl border border-border bg-surface-alt p-6 flex flex-col justify-between"
-        >
+
+        <!-- INFO -->
+        <div class="rounded-3xl border border-white/10 bg-surface-alt p-6 flex flex-col justify-between">
           <div>
-            <h3 class="text-xl font-semibold text-foreground">
+            <h3 class="text-xl font-semibold text-white">
               Tienda física en Lima
             </h3>
 
-            <p class="mt-2 text-muted-2">
+            <p class="mt-2 text-gray-400">
               Contamos con tienda física y atención para todo
-              <span class="text-foreground font-medium">
+              <span class="text-white font-medium">
                 {" "}Lima Metropolitana
               </span>. Puedes visitarnos o coordinar delivery.
             </p>
 
-            <div class="mt-5 space-y-3">
+            <div class="mt-5 space-y-4">
+
+              <!-- DIRECCIÓN -->
               <div class="flex items-start gap-3">
                 <svg
-                  class="w-6 text-primary"
+                  class="w-6 h-6 text-red-600 flex-shrink-0"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 640 640"
                   fill="currentColor"
                 >
-                  <path
-                    d="M128 252.6C128 148.4 214 64 320 64C426 64 512 148.4 512 252.6C512 371.9 391.8 514.9 341.6 569.4C329.8 582.2 310.1 582.2 298.3 569.4C248.1 514.9 127.9 371.9 127.9 252.6zM320 320C355.3 320 384 291.3 384 256C384 220.7 355.3 192 320 192C284.7 192 256 220.7 256 256C256 291.3 284.7 320 320 320z"
-                  ></path>
+                  <path d="M128 252.6C128 148.4 214 64 320 64C426 64 512 148.4 512 252.6C512 371.9 391.8 514.9 341.6 569.4C329.8 582.2 310.1 582.2 298.3 569.4C248.1 514.9 127.9 371.9 127.9 252.6zM320 320C355.3 320 384 291.3 384 256C384 220.7 355.3 192 320 192C284.7 192 256 220.7 256 256C256 291.3 284.7 320 320 320z"/>
                 </svg>
-                <p class="text-sm text-muted-2">
+
+                <p class="text-sm text-gray-400">
                   {address}
                 </p>
               </div>
 
+              <!-- DELIVERY -->
               <div class="flex items-start gap-3">
                 <svg
-                  class="w-6 text-primary"
+                  class="w-6 h-6 text-red-600 flex-shrink-0"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 640 640"
                   fill="currentColor"
                 >
-                  <path
-                    d="M32 160C32 124.7 60.7 96 96 96L384 96C419.3 96 448 124.7 448 160L448 192L498.7 192C515.7 192 532 198.7 544 210.7L589.3 256C601.3 268 608 284.3 608 301.3L608 448C608 483.3 579.3 512 544 512L540.7 512C530.3 548.9 496.3 576 456 576C415.7 576 381.8 548.9 371.3 512L268.7 512C258.3 548.9 224.3 576 184 576C143.7 576 109.8 548.9 99.3 512L96 512C60.7 512 32 483.3 32 448L32 160zM544 352L544 301.3L498.7 256L448 256L448 352L544 352zM224 488C224 465.9 206.1 448 184 448C161.9 448 144 465.9 144 488C144 510.1 161.9 528 184 528C206.1 528 224 510.1 224 488zM456 528C478.1 528 496 510.1 496 488C496 465.9 478.1 448 456 448C433.9 448 416 465.9 416 488C416 510.1 433.9 528 456 528z"
-                  ></path>
+                  <path d="M32 160C32 124.7 60.7 96 96 96L384 96C419.3 96 448 124.7 448 160L448 192L498.7 192C515.7 192 532 198.7 544 210.7L589.3 256C601.3 268 608 284.3 608 301.3L608 448C608 483.3 579.3 512 544 512L540.7 512C530.3 548.9 496.3 576 456 576C415.7 576 381.8 548.9 371.3 512L268.7 512C258.3 548.9 224.3 576 184 576C143.7 576 109.8 548.9 99.3 512L96 512C60.7 512 32 483.3 32 448L32 160z"/>
                 </svg>
-                <p class="text-sm text-muted-2">
+
+                <p class="text-sm text-gray-400">
                   Atención y delivery en Lima Metropolitana
                 </p>
               </div>
 
+              <!-- HORARIO -->
               <div class="flex items-start gap-3">
                 <svg
-                  class="w-6 text-primary"
+                  class="w-6 h-6 text-red-600 flex-shrink-0"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 640 640"
                   fill="currentColor"
                 >
-                  <path
-                    d="M320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320C64 178.6 178.6 64 320 64zM296 184L296 320C296 328 300 335.5 306.7 340L402.7 404C413.7 411.4 428.6 408.4 436 397.3C443.4 386.2 440.4 371.4 429.3 364L344 307.2L344 184C344 170.7 333.3 160 320 160C306.7 160 296 170.7 296 184z"
-                  ></path>
+                  <path d="M320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320C64 178.6 178.6 64 320 64zM296 184L296 320C296 328 300 335.5 306.7 340L402.7 404C413.7 411.4 428.6 408.4 436 397.3C443.4 386.2 440.4 371.4 429.3 364L344 307.2L344 184C344 170.7 333.3 160 320 160C306.7 160 296 170.7 296 184z"/>
                 </svg>
-                <p class="text-sm text-muted-2">
+
+                <p class="text-sm text-gray-400">
                   Horario de atención sujeto a coordinación previa
                 </p>
               </div>
@@ -81,29 +84,33 @@ const address = "Av. de la Marina Nro. 3410 - San Miguel - Lima";
             href="https://www.google.com/maps?q=Av.+de+la+Marina+3410,+San+Miguel,+Lima"
             target="_blank"
             rel="noopener noreferrer"
-            class="mt-6 inline-flex items-center justify-center rounded-xl border border-border bg-surface px-5 py-3 text-sm font-semibold text-foreground hover:bg-surface-alt transition"
+            class="mt-6 inline-flex items-center justify-center
+                   rounded-xl border border-white/10
+                   bg-surface px-5 py-3
+                   text-sm font-semibold text-white
+                   hover:bg-surface-alt transition"
           >
             Ver en Google Maps
           </a>
         </div>
 
-        <div
-          class="relative rounded-3xl overflow-hidden border border-border bg-surface-alt"
-        >
+        <!-- MAPA -->
+        <div class="relative rounded-3xl overflow-hidden border border-white/10 bg-surface-alt">
           <div
             aria-hidden="true"
             class="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full opacity-20 blur-3xl"
-            style="background: var(--color-primary);"
-          >
-          </div>
+            style="background: rgb(220 38 38);"
+          ></div>
 
           <iframe
             class="relative z-10 w-full h-[360px] md:h-full"
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d487.6955895430354!2d-77.10214!3d-12.073442!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c962092b3607%3A0xa201755524350c62!2sALVILLANTAS%20E.I.R.L!5e0!3m2!1ses!2sus!4v1698439514371!5m2!1ses!2sus"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            allowfullscreen></iframe>
+            allowfullscreen
+          ></iframe>
         </div>
+
       </div>
     </div>
   </ContentWidth>

@@ -1,8 +1,11 @@
-export const products = [
-  {
-    name: "Llanta1",
-    images: [],
-    brand: "Hankook",
-    price: 570,
-  },
+import autos from "./autos";
+import camionetas from "./camionetas";
+import camion from "./camion";
+
+const products = [
+  ...autos,
+  ...camionetas,
+  ...camion,
 ];
+
+export default products;

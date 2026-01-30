@@ -1,0 +1,21 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BrandsGrid from "./BrandsGrid.astro";
+---
+
+<BaseLayout title="Marcas">
+  <section class="bg-black py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h1 class="text-white text-3xl font-bold mb-4">
+        Nuestras marcas
+      </h1>
+
+      <p class="text-gray-400 mb-12">
+        Trabajamos con las principales marcas de neumáticos para garantizar
+        calidad, seguridad y rendimiento.
+      </p>
+
+      <BrandsGrid />
+    </div>
+  </section>
+</BaseLayout>

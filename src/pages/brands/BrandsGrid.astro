@@ -1,0 +1,51 @@
+---
+const brands = [
+  { name: "AEOLUS", file: "aeolus" },
+  { name: "BRIDGESTONE", file: "bridgestone" },
+  { name: "CONTINENTAL", file: "continental" },
+  { name: "DELINTE", file: "delinte" },
+  { name: "DUNLOP TIRES", file: "dunlop" },
+  { name: "FALKEN", file: "falken" },
+  { name: "FEDERAL", file: "federal" },
+  { name: "FIRESTONE", file: "firestone" },
+  { name: "GENERAL TIRE", file: "general" },
+  { name: "GOODYEAR", file: "goodyear" },
+  { name: "GT RADIAL", file: "gtradial" },
+  { name: "HANKOOK", file: "hankook" },
+  { name: "KUMHO TIRE", file: "kumho" },
+  { name: "MICHELIN", file: "michelin" },
+  { name: "NEXEN TIRE", file: "nexen" },
+  { name: "PIRELLI", file: "pirelli" },
+  { name: "SUMITOMO", file: "sumitomo" },
+  { name: "TOYO TIRES", file: "toyo" },
+  { name: "TRIANGLE", file: "triangle" },
+  { name: "WESTLAKE", file: "westlake" },
+  { name: "YOKOHAMA", file: "yokohama" },
+];
+---
+
+<div
+  class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
+>
+  {brands.map((brand) => (
+    <a
+      href={`/products?brand=${brand.file}`}
+      class="group bg-surface rounded-xl p-4 flex flex-col items-center justify-center shadow hover:scale-105 transition"
+    >
+      <div
+        class="bg-white border border-gray-300 rounded-lg p-3 w-full h-16 flex items-center justify-center group-hover:border-orange-500 transition"
+      >
+        <img
+          src={`/images/brands/${brand.file}.webp`}
+          alt={brand.name}
+          class="max-h-10 object-contain"
+          loading="lazy"
+        />
+      </div>
+
+      <span class="mt-3 text-xs text-red-600 font-semibold uppercase">
+        {brand.name}
+      </span>
+    </a>
+  ))}
+</div>
