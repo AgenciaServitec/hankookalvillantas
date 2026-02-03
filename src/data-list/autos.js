@@ -171,13 +171,13 @@ const products = [
   },
   {
     id: 18,
-    brand: "gt-radial",
+    brand: "gt radial",
     vehicleType: "auto",
     name: "MaxTour GT Radial 73T",
     size: "155/70 R12",
     load: 365,
     speed: "190 Km/h",
-    image: "/images/products/gtradial/autos-gtradial-maxtour-155-70-r12.webp",
+    image: "/images/products/gt-radial/autos-gtradial-maxtour-155-70-r12.webp",
   },
 ];
 

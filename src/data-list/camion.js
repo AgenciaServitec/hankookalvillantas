@@ -10,7 +10,7 @@ const camionProducts = [
     size: "7.50 R16",
     load: 1400,
     speed: "90 Km/h",
-    image: "/images/products/camion/continental-ldr-post-7-50-r16.webp",
+    image: "/images/products/continental/camion-continental-ldr-post-7-50-r16.webp",
   },
   {
     id: 202,
@@ -20,7 +20,7 @@ const camionProducts = [
     size: "7.50 R16",
     load: 1350,
     speed: "90 Km/h",
-    image: "/images/products/camion/continental-lsr1-ddl-7-50-r16.webp",
+    image: "/images/products/continental/camion-continental-lsr1-ddl-7-50-r16.webp",
   },
   {
     id: 203,
@@ -30,7 +30,7 @@ const camionProducts = [
     size: "11.00 R22.5",
     load: 1500,
     speed: "90 Km/h",
-    image: "/images/products/camion/continental-hdc1-post-11r22-5.webp",
+    image: "/images/products/continental/camion-continental-hdc1-post-11r22-5.webp",
   },
   {
     id: 204,
@@ -40,7 +40,7 @@ const camionProducts = [
     size: "295/80 R22.5",
     load: 3550,
     speed: "130 Km/h",
-    image: "/images/products/camion/bridgestone-r227-295-80-r22-5.webp",
+    image: "/images/products/bridgestone/camion-bridgestone-r227-295-80-r22-5.webp",
   },
   {
     id: 205,
@@ -50,7 +50,7 @@ const camionProducts = [
     size: "275/70 R22.5",
     load: 2800,
     speed: "130 Km/h",
-    image: "/images/products/camion/bridgestone-r294-275-70-r22-5.webp",
+    image: "/images/products/bridgestone/camion-bridgestone-r294-275-70-r22-5.webp",
   },
   {
     id: 206,
@@ -60,7 +60,7 @@ const camionProducts = [
     size: "295/80 R22.5",
     load: 1400,
     speed: "120 Km/h",
-    image: "/images/products/camion/bridgestone-r294-295-80-r22-5.webp",
+    image: "/images/products/bridgestone/camion-bridgestone-r294-295-80-r22-5.webp",
   },
   {
     id: 207,
@@ -70,7 +70,7 @@ const camionProducts = [
     size: "285/75 R24.5",
     load: 1400,
     speed: "120 Km/h",
-    image: "/images/products/camion/bridgestone-r250-285-75-r24-5.webp",
+    image: "/images/products/bridgestone/camion-bridgestone-r250-285-75-r24-5.webp",
   },
   {
     id: 208,
@@ -80,7 +80,7 @@ const camionProducts = [
     size: "295/80 R22.5",
     load: 1400,
     speed: "120 Km/h",
-    image: "/images/products/camion/bridgestone-r297-295-80-r22-5.webp",
+    image: "/images/products/bridgestone/camion-bridgestone-r297-295-80-r22-5.webp",
   },
   {
     id: 209,
@@ -90,7 +90,7 @@ const camionProducts = [
     size: "275/80 R22.5",
     load: 1060,
     speed: "110 Km/h",
-    image: "/images/products/camion/bridgestone-r297-275-80-r22-5.webp",
+    image: "/images/products/bridgestone/camion-bridgestone-r297-275-80-r22-5.webp",
   },
   {
     id: 210,
@@ -100,7 +100,7 @@ const camionProducts = [
     size: "275/80 R22.5",
     load: 1600,
     speed: "130 Km/h",
-    image: "/images/products/camion/bridgestone-m716-275-80-r22-5.webp",
+    image: "/images/products/bridgestone/camion-bridgestone-m716-275-80-r22-5.webp",
   },
   {
     id: 211,
@@ -110,7 +110,7 @@ const camionProducts = [
     size: "295/80 R22.5",
     load: 800,
     speed: "100 Km/h",
-    image: "/images/products/camion/bridgestone-r184-295-80-r22-5.webp",
+    image: "/images/products/bridgestone/camion-bridgestone-r184-295-80-r22-5.webp",
   },
   {
     id: 212,
@@ -120,7 +120,7 @@ const camionProducts = [
     size: "1000/R20",
     load: 3000,
     speed: "90 Km/h",
-    image: "/images/products/camion/hankook-1000r20-dm04.webp",
+    image: "/images/products/hankook/camion-hankook-1000r20-dm04.webp",
   },
   {
     id: 213,
@@ -130,7 +130,7 @@ const camionProducts = [
     size: "1100/R20",
     load: 3000,
     speed: "90 Km/h",
-    image: "/images/products/camion/hankook-1100r20-144k.webp",
+    image: "/images/products/hankook/camion-hankook-1100r20-144k.webp",
   },
   {
     id: 214,
@@ -140,7 +140,7 @@ const camionProducts = [
     size: "1200/R20",
     load: 3000,
     speed: "90 Km/h",
-    image: "/images/products/camion/hankook-1200r20-152g.webp",
+    image: "/images/products/hankook/camion-hankook-1200r20-152g.webp",
   },
   {
     id: 215,
@@ -150,7 +150,7 @@ const camionProducts = [
     size: "295/80 R22.5",
     load: 2800,
     speed: "120 Km/h",
-    image: "/images/products/camion/toyo-m122-295-80-r22-5.webp",
+    image: "/images/products/toyo/camion-toyo-m122-295-80-r22-5.webp",
   },
   {
     id: 216,
@@ -160,7 +160,7 @@ const camionProducts = [
     size: "295/75 R22.5",
     load: 2800,
     speed: "120 Km/h",
-    image: "/images/products/camion/toyo-m122-295-75-r22-5.webp",
+    image: "/images/products/toyo/camion-toyo-m122-295-75-r22-5.webp",
   },
   {
     id: 217,
@@ -170,7 +170,7 @@ const camionProducts = [
     size: "285/75 R24.5",
     load: 2800,
     speed: "120 Km/h",
-    image: "/images/products/camion/toyo-m122-285-75-r24-5.webp",
+    image: "/images/products/toyo/camion-toyo-m122-285-75-r24-5.webp",
   },
   {
     id: 218,
@@ -180,7 +180,7 @@ const camionProducts = [
     size: "215/75 R17.5",
     load: 2240,
     speed: "100 Km/h",
-    image: "/images/products/camion/toyo-m130-215-75-r17-5.webp",
+    image: "/images/products/toyo/camion-toyo-m130-215-75-r17-5.webp",
   },
 ];
 
