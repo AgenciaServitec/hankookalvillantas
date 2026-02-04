@@ -1,0 +1,423 @@
+---
+
+import ContentWidth from "../components/ui/ContentWidth.astro";
+
+---
+
+  <section class="bg-surface border-y border-white/10 mb-20 py-14">
+<ContentWidth>
+
+  <div class=" mt-6 rounded-2xl border border-white/10 bg-surface-alt p-5">
+    <!-- Header -->
+    <div class="flex items-center justify-between gap-3">
+      <h2 class="text-lg sm:text-xl font-extrabold text-foreground">
+        Productos similares
+      </h2>
+      <a href="#" class="text-sm text-muted hover:text-foreground transition">
+        Ver todos →
+      </a>
+    </div>
+
+    <!-- Carousel -->
+    <div class="mt-4 relative">
+      <!-- Prev -->
+      <button
+        type="button"
+        aria-label="Anterior"
+        class="hidden sm:grid absolute left-2 top-1/2 -translate-y-1/2 z-10
+               w-11 h-11 place-items-center rounded-xl
+               border border-white/10 bg-background/60 backdrop-blur
+               hover:bg-background/80 transition">
+        ‹
+      </button>
+
+      <!-- Next -->
+      <button
+        type="button"
+        aria-label="Siguiente"
+        class="hidden sm:grid absolute right-2 top-1/2 -translate-y-1/2 z-10
+               w-11 h-11 place-items-center rounded-xl
+               border border-white/10 bg-background/60 backdrop-blur
+               hover:bg-background/80 transition">
+        ›
+      </button>
+
+      <!-- Track -->
+      <div
+        class="flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory
+               pb-2 px-1 -mx-1
+               [scrollbar-width:none] [-ms-overflow-style:none]"
+      >
+        <!-- Card -->
+        <article
+          class="snap-start shrink-0 w-[85%] sm:w-[50%] lg:w-[32%] xl:w-[24%]
+                 group h-full rounded-2xl border border-white/10
+                 bg-surface/50 hover:bg-surface/70 transition overflow-hidden"
+        >
+          <a href="#" class="block h-full">
+            <div class="p-4 sm:p-5 flex flex-col h-full">
+              <!-- Image -->
+              <div class="relative rounded-2xl bg-white overflow-hidden">
+                <img
+                  src="https://placehold.co/600x400/png"
+                  alt="Producto"
+                  class="w-full h-44 sm:h-56 lg:h-60 object-contain
+                         transition group-hover:scale-[1.02]"
+                  loading="lazy"
+                />
+              </div>
+
+              <!-- Content -->
+              <div class="mt-4">
+                <div class="flex items-center justify-between gap-2">
+                  <div class="flex items-center gap-2">
+                    <span class="text-[10px] sm:text-[11px] px-2.5 py-1 rounded-full
+                                 border border-white/10 bg-background/40 text-muted">
+                      Marca
+                    </span>
+                    <span class="text-[10px] sm:text-[11px] px-2.5 py-1 rounded-full
+                                 border bg-primary/15 text-primary border-primary/20">
+                      Compatible
+                    </span>
+                  </div>
+                  <span class="text-[10px] sm:text-[11px] px-2.5 py-1 rounded-full
+                               border bg-success/15 text-success border-success/20">
+                    En stock
+                  </span>
+                </div>
+
+                <h3 class="mt-3 text-foreground font-extrabold text-base sm:text-lg leading-snug">
+                  Producto Demo
+                </h3>
+
+                <p class="mt-1 text-xs sm:text-sm text-muted">
+                  Compatible <span class="mx-2 text-white/10">|</span> SKU: DEMO-001
+                </p>
+
+                <div class="mt-3 flex items-end justify-between">
+                  <p class="text-foreground font-extrabold text-lg sm:text-xl">
+                    $ 99
+                  </p>
+                </div>
+              </div>
+
+              <!-- Trust -->
+              <p class="flex gap-2 items-center mt-2 text-xs text-muted">
+                ✓ Compra segura
+              </p>
+
+              <!-- CTA -->
+              <div class="mt-auto pt-4">
+                <button
+                  type="button"
+                  class="w-full rounded-xl py-3 font-semibold transition
+                         shadow-sm hover:shadow-md active:scale-[0.99]
+                         bg-primary text-black hover:bg-primary-hover"
+                >
+                  Agregar al carrito
+                </button>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <article
+          class="snap-start shrink-0 w-[85%] sm:w-[50%] lg:w-[32%] xl:w-[24%]
+                 group h-full rounded-2xl border border-white/10
+                 bg-surface/50 hover:bg-surface/70 transition overflow-hidden"
+        >
+          <a href="#" class="block h-full">
+            <div class="p-4 sm:p-5 flex flex-col h-full">
+              <!-- Image -->
+              <div class="relative rounded-2xl bg-white overflow-hidden">
+                <img
+                  src="https://placehold.co/600x400/png"
+                  alt="Producto"
+                  class="w-full h-44 sm:h-56 lg:h-60 object-contain
+                         transition group-hover:scale-[1.02]"
+                  loading="lazy"
+                />
+              </div>
+
+              <!-- Content -->
+              <div class="mt-4">
+                <div class="flex items-center justify-between gap-2">
+                  <div class="flex items-center gap-2">
+                    <span class="text-[10px] sm:text-[11px] px-2.5 py-1 rounded-full
+                                 border border-white/10 bg-background/40 text-muted">
+                      Marca
+                    </span>
+                    <span class="text-[10px] sm:text-[11px] px-2.5 py-1 rounded-full
+                                 border bg-primary/15 text-primary border-primary/20">
+                      Compatible
+                    </span>
+                  </div>
+                  <span class="text-[10px] sm:text-[11px] px-2.5 py-1 rounded-full
+                               border bg-success/15 text-success border-success/20">
+                    En stock
+                  </span>
+                </div>
+
+                <h3 class="mt-3 text-foreground font-extrabold text-base sm:text-lg leading-snug">
+                  Producto Demo
+                </h3>
+
+                <p class="mt-1 text-xs sm:text-sm text-muted">
+                  Compatible <span class="mx-2 text-white/10">|</span> SKU: DEMO-001
+                </p>
+
+                <div class="mt-3 flex items-end justify-between">
+                  <p class="text-foreground font-extrabold text-lg sm:text-xl">
+                    $ 99
+                  </p>
+                </div>
+              </div>
+
+              <!-- Trust -->
+              <p class="flex gap-2 items-center mt-2 text-xs text-muted">
+                ✓ Compra segura
+              </p>
+
+              <!-- CTA -->
+              <div class="mt-auto pt-4">
+                <button
+                  type="button"
+                  class="w-full rounded-xl py-3 font-semibold transition
+                         shadow-sm hover:shadow-md active:scale-[0.99]
+                         bg-primary text-black hover:bg-primary-hover"
+                >
+                  Agregar al carrito
+                </button>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <article
+          class="snap-start shrink-0 w-[85%] sm:w-[50%] lg:w-[32%] xl:w-[24%]
+                 group h-full rounded-2xl border border-white/10
+                 bg-surface/50 hover:bg-surface/70 transition overflow-hidden"
+        >
+          <a href="#" class="block h-full">
+            <div class="p-4 sm:p-5 flex flex-col h-full">
+              <!-- Image -->
+              <div class="relative rounded-2xl bg-white overflow-hidden">
+                <img
+                  src="https://placehold.co/600x400/png"
+                  alt="Producto"
+                  class="w-full h-44 sm:h-56 lg:h-60 object-contain
+                         transition group-hover:scale-[1.02]"
+                  loading="lazy"
+                />
+              </div>
+
+              <!-- Content -->
+              <div class="mt-4">
+                <div class="flex items-center justify-between gap-2">
+                  <div class="flex items-center gap-2">
+                    <span class="text-[10px] sm:text-[11px] px-2.5 py-1 rounded-full
+                                 border border-white/10 bg-background/40 text-muted">
+                      Marca
+                    </span>
+                    <span class="text-[10px] sm:text-[11px] px-2.5 py-1 rounded-full
+                                 border bg-primary/15 text-primary border-primary/20">
+                      Compatible
+                    </span>
+                  </div>
+                  <span class="text-[10px] sm:text-[11px] px-2.5 py-1 rounded-full
+                               border bg-success/15 text-success border-success/20">
+                    En stock
+                  </span>
+                </div>
+
+                <h3 class="mt-3 text-foreground font-extrabold text-base sm:text-lg leading-snug">
+                  Producto Demo
+                </h3>
+
+                <p class="mt-1 text-xs sm:text-sm text-muted">
+                  Compatible <span class="mx-2 text-white/10">|</span> SKU: DEMO-001
+                </p>
+
+                <div class="mt-3 flex items-end justify-between">
+                  <p class="text-foreground font-extrabold text-lg sm:text-xl">
+                    $ 99
+                  </p>
+                </div>
+              </div>
+
+              <!-- Trust -->
+              <p class="flex gap-2 items-center mt-2 text-xs text-muted">
+                ✓ Compra segura
+              </p>
+
+              <!-- CTA -->
+              <div class="mt-auto pt-4">
+                <button
+                  type="button"
+                  class="w-full rounded-xl py-3 font-semibold transition
+                         shadow-sm hover:shadow-md active:scale-[0.99]
+                         bg-primary text-black hover:bg-primary-hover"
+                >
+                  Agregar al carrito
+                </button>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <article
+          class="snap-start shrink-0 w-[85%] sm:w-[50%] lg:w-[32%] xl:w-[24%]
+                 group h-full rounded-2xl border border-white/10
+                 bg-surface/50 hover:bg-surface/70 transition overflow-hidden"
+        >
+          <a href="#" class="block h-full">
+            <div class="p-4 sm:p-5 flex flex-col h-full">
+              <!-- Image -->
+              <div class="relative rounded-2xl bg-white overflow-hidden">
+                <img
+                  src="https://placehold.co/600x400/png"
+                  alt="Producto"
+                  class="w-full h-44 sm:h-56 lg:h-60 object-contain
+                         transition group-hover:scale-[1.02]"
+                  loading="lazy"
+                />
+              </div>
+
+              <!-- Content -->
+              <div class="mt-4">
+                <div class="flex items-center justify-between gap-2">
+                  <div class="flex items-center gap-2">
+                    <span class="text-[10px] sm:text-[11px] px-2.5 py-1 rounded-full
+                                 border border-white/10 bg-background/40 text-muted">
+                      Marca
+                    </span>
+                    <span class="text-[10px] sm:text-[11px] px-2.5 py-1 rounded-full
+                                 border bg-primary/15 text-primary border-primary/20">
+                      Compatible
+                    </span>
+                  </div>
+                  <span class="text-[10px] sm:text-[11px] px-2.5 py-1 rounded-full
+                               border bg-success/15 text-success border-success/20">
+                    En stock
+                  </span>
+                </div>
+
+                <h3 class="mt-3 text-foreground font-extrabold text-base sm:text-lg leading-snug">
+                  Producto Demo
+                </h3>
+
+                <p class="mt-1 text-xs sm:text-sm text-muted">
+                  Compatible <span class="mx-2 text-white/10">|</span> SKU: DEMO-001
+                </p>
+
+                <div class="mt-3 flex items-end justify-between">
+                  <p class="text-foreground font-extrabold text-lg sm:text-xl">
+                    $ 99
+                  </p>
+                </div>
+              </div>
+
+              <!-- Trust -->
+              <p class="flex gap-2 items-center mt-2 text-xs text-muted">
+                ✓ Compra segura
+              </p>
+
+              <!-- CTA -->
+              <div class="mt-auto pt-4">
+                <button
+                  type="button"
+                  class="w-full rounded-xl py-3 font-semibold transition
+                         shadow-sm hover:shadow-md active:scale-[0.99]
+                         bg-primary text-black hover:bg-primary-hover"
+                >
+                  Agregar al carrito
+                </button>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <article
+          class="snap-start shrink-0 w-[85%] sm:w-[50%] lg:w-[32%] xl:w-[24%]
+                 group h-full rounded-2xl border border-white/10
+                 bg-surface/50 hover:bg-surface/70 transition overflow-hidden"
+        >
+          <a href="#" class="block h-full">
+            <div class="p-4 sm:p-5 flex flex-col h-full">
+              <!-- Image -->
+              <div class="relative rounded-2xl bg-white overflow-hidden">
+                <img
+                  src="https://placehold.co/600x400/png"
+                  alt="Producto"
+                  class="w-full h-44 sm:h-56 lg:h-60 object-contain
+                         transition group-hover:scale-[1.02]"
+                  loading="lazy"
+                />
+              </div>
+
+              <!-- Content -->
+              <div class="mt-4">
+                <div class="flex items-center justify-between gap-2">
+                  <div class="flex items-center gap-2">
+                    <span class="text-[10px] sm:text-[11px] px-2.5 py-1 rounded-full
+                                 border border-white/10 bg-background/40 text-muted">
+                      Marca
+                    </span>
+                    <span class="text-[10px] sm:text-[11px] px-2.5 py-1 rounded-full
+                                 border bg-primary/15 text-primary border-primary/20">
+                      Compatible
+                    </span>
+                  </div>
+                  <span class="text-[10px] sm:text-[11px] px-2.5 py-1 rounded-full
+                               border bg-success/15 text-success border-success/20">
+                    En stock
+                  </span>
+                </div>
+
+                <h3 class="mt-3 text-foreground font-extrabold text-base sm:text-lg leading-snug">
+                  Producto Demo
+                </h3>
+
+                <p class="mt-1 text-xs sm:text-sm text-muted">
+                  Compatible <span class="mx-2 text-white/10">|</span> SKU: DEMO-001
+                </p>
+
+                <div class="mt-3 flex items-end justify-between">
+                  <p class="text-foreground font-extrabold text-lg sm:text-xl">
+                    $ 99
+                  </p>
+                </div>
+              </div>
+
+              <!-- Trust -->
+              <p class="flex gap-2 items-center mt-2 text-xs text-muted">
+                ✓ Compra segura
+              </p>
+
+              <!-- CTA -->
+              <div class="mt-auto pt-4">
+                <button
+                  type="button"
+                  class="w-full rounded-xl py-3 font-semibold transition
+                         shadow-sm hover:shadow-md active:scale-[0.99]
+                         bg-primary text-black hover:bg-primary-hover"
+                >
+                  Agregar al carrito
+                </button>
+              </div>
+            </div>
+          </a>
+        </article>
+
+      </div>
+
+    </div>
+
+    <style>
+        [scrollbar-width="none"]::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+  </div>
+  </ContentWidth>
+  </section>
