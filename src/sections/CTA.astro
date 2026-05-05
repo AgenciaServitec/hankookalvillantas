@@ -10,15 +10,17 @@ const {
 } = Astro.props;
 ---
 
-<section class="relative overflow-hidden border-y border-white/10 bg-surface mb-20">
+<section
+  class="relative overflow-hidden border-y border-white/10 bg-surface mb-20"
+>
   <ContentWidth>
     <div class="py-14">
-      <div class="rounded-3xl border border-white/10 bg-surface-alt p-7 md:p-10">
-
-        <!-- TEXTO + CTA -->
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-7">
-
-          <!-- TEXTO -->
+      <div
+        class="rounded-3xl border border-white/10 bg-surface-alt p-7 md:p-10"
+      >
+        <div
+          class="flex flex-col md:flex-row md:items-center md:justify-between gap-7"
+        >
           <div class="max-w-2xl">
             <h2 class="text-2xl md:text-3xl font-semibold text-white">
               {title}
@@ -29,21 +31,25 @@ const {
             </p>
 
             <div class="mt-4 flex flex-wrap gap-2">
-              <span class="rounded-full border border-white/10 bg-surface px-3 py-1 text-xs text-gray-400">
+              <span
+                class="rounded-full border border-white/10 bg-surface px-3 py-1 text-xs text-gray-400"
+              >
                 Delivery coordinado
               </span>
-              <span class="rounded-full border border-white/10 bg-surface px-3 py-1 text-xs text-gray-400">
+              <span
+                class="rounded-full border border-white/10 bg-surface px-3 py-1 text-xs text-gray-400"
+              >
                 Pagos con tarjeta / Yape
               </span>
-              <span class="rounded-full border border-white/10 bg-surface px-3 py-1 text-xs text-gray-400">
+              <span
+                class="rounded-full border border-white/10 bg-surface px-3 py-1 text-xs text-gray-400"
+              >
                 Asesoría por medida
               </span>
             </div>
           </div>
 
-          <!-- BOTONES -->
           <div class="flex flex-col sm:flex-row gap-3">
-            <!-- WHATSAPP -->
             <a
               href={whatsappHref}
               target="_blank"
@@ -61,13 +67,14 @@ const {
                 fill="currentColor"
                 aria-hidden="true"
               >
-                <path d="M476.9 161.1C435 119.1 379.2 96 319.9 96C197.5 96 97.9 195.6 97.9 318C97.9 357.1 108.1 395.3 127.5 429L96 544L213.7 513.1C246.1 530.8 282.6 540.1 319.8 540.1L319.9 540.1C442.2 540.1 544 440.5 544 318.1C544 258.8 518.8 203.1 476.9 161.1z"/>
+                <path
+                  d="M476.9 161.1C435 119.1 379.2 96 319.9 96C197.5 96 97.9 195.6 97.9 318C97.9 357.1 108.1 395.3 127.5 429L96 544L213.7 513.1C246.1 530.8 282.6 540.1 319.8 540.1L319.9 540.1C442.2 540.1 544 440.5 544 318.1C544 258.8 518.8 203.1 476.9 161.1z"
+                ></path>
               </svg>
 
               <span>Hablar con un asesor</span>
             </a>
 
-            <!-- CATÁLOGO -->
             <a
               href={secondaryHref}
               class="inline-flex items-center justify-center
@@ -82,13 +89,15 @@ const {
           </div>
         </div>
 
-        <!-- INFO EXTRA -->
-        <div class="mt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-3
-                    rounded-2xl border border-white/10 bg-surface p-4">
-
+        <div
+          class="mt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-3
+                    rounded-2xl border border-white/10 bg-surface p-4"
+        >
           <p class="text-sm text-gray-400">
             Envíanos tu <span class="text-white font-semibold">medida</span>
-            (ej: 205/55 R16) o tu <span class="text-white font-semibold">auto</span>
+            (ej: 205/55 R16) o tu <span class="text-white font-semibold"
+              >auto</span
+            >
             (año, marca y modelo) y te cotizamos al toque.
           </p>
 
