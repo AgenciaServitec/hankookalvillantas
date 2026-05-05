@@ -9,5 +9,5 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   output: "static",
-  site: "[https://www.facilcar.net](https://www.facilcar.net)",
+  site: "https://www.facilcar.net",
 });
