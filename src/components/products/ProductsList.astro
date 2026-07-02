@@ -7,7 +7,6 @@ const { searchParams } = Astro.url;
 const brandFilter = searchParams.get("brand");
 const vehicleFilter = searchParams.get("vehicle");
 
-// FILTRAR PRODUCTOS (SOLO UNO ACTIVO)
 const filteredProducts = products.filter((product) => {
   if (brandFilter) {
     return product.brand === brandFilter;
@@ -20,7 +19,6 @@ const filteredProducts = products.filter((product) => {
   return true;
 });
 
-// MENSAJE DE FILTRO
 let filterMessage = "";
 if (brandFilter) {
   filterMessage = `la marca "${brandFilter}"`;
@@ -30,13 +28,10 @@ if (brandFilter) {
 ---
 
 <div class="space-y-6">
-  <h2 class="text-white text-xl font-bold">
-    Busca tu llanta
-  </h2>
+  <h2 class="text-white text-xl font-bold">Busca tu llanta</h2>
 
   {
     filteredProducts.length === 0 ? (
-      <!-- ESTADO VACÍO -->
       <div class="bg-surface rounded-xl p-10 text-center">
         <div class="mb-4">
           <svg
@@ -65,7 +60,7 @@ if (brandFilter) {
         </p>
 
         <a
-          href="/products"
+          href="/productos"
           class="inline-block px-6 py-2 bg-red-600 hover:bg-red-700
                  text-white font-semibold rounded-lg transition-colors"
         >
@@ -73,7 +68,6 @@ if (brandFilter) {
         </a>
       </div>
     ) : (
-      <!-- LISTADO -->
       <div class="space-y-6">
         {filteredProducts.map((product) => (
           <ProductCard product={product} />

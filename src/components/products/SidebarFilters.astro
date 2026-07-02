@@ -36,64 +36,73 @@ const brands = [
 ---
 
 <aside class="bg-surface rounded-xl p-6 space-y-6">
-
   <!-- TIPO DE VEHÍCULO -->
   <details open>
-    <summary class="flex justify-between items-center text-white font-bold cursor-pointer">
+    <summary
+      class="flex justify-between items-center text-white font-bold cursor-pointer"
+    >
       ☰ Tipo de vehículo
       <span>⌄</span>
     </summary>
 
     <ul class="mt-4 space-y-2 text-sm">
-      {vehicleTypes.map((type) => (
-        <li>
-          <a
-            href={`/products?vehicle=${type.value}`}
-            class={`block transition ${
-              currentVehicle === type.value
-                ? "text-red-500 font-semibold"
-                : "text-gray-300 hover:text-red-500"
-            }`}
-          >
-            {type.label}
-          </a>
-        </li>
-      ))}
+      {
+        vehicleTypes.map((type) => (
+          <li>
+            <a
+              href={`/products?vehicle=${type.value}`}
+              class={`block transition ${
+                currentVehicle === type.value
+                  ? "text-red-500 font-semibold"
+                  : "text-gray-300 hover:text-red-500"
+              }`}
+            >
+              {type.label}
+            </a>
+          </li>
+        ))
+      }
     </ul>
   </details>
 
   <!-- MARCAS -->
   <details open>
-    <summary class="flex justify-between items-center text-white font-bold cursor-pointer">
+    <summary
+      class="flex justify-between items-center text-white font-bold cursor-pointer"
+    >
       ☰ Marcas
       <span>⌄</span>
     </summary>
 
     <ul class="mt-4 space-y-2 text-sm max-h-[360px] overflow-y-auto pr-2">
-      {brands.map((brand) => (
-        <li>
-          <a
-            href={`/products?brand=${brand}`}
-            class={`block transition ${
-              currentBrand === brand
-                ? "text-red-500 font-semibold"
-                : "text-gray-300 hover:text-red-500"
-            }`}
-          >
-            {brand}
-          </a>
-        </li>
-      ))}
+      {
+        brands.map((brand) => (
+          <li>
+            <a
+              href={`/products?brand=${brand}`}
+              class={`block transition ${
+                currentBrand === brand
+                  ? "text-red-500 font-semibold"
+                  : "text-gray-300 hover:text-red-500"
+              }`}
+            >
+              {brand}
+            </a>
+          </li>
+        ))
+      }
     </ul>
   </details>
 
   <!-- LIMPIAR FILTRO -->
-  {(currentBrand || currentVehicle) && (
-    <a
-      href="/products"
-      class="block text-center text-sm text-red-500 hover:text-red-400 font-semibold underline"
-    >
-      Limpiar filtro
-    </a>
-  )}
+  {
+    (currentBrand || currentVehicle) && (
+      <a
+        href="/productos"
+        class="block text-center text-sm text-red-500 hover:text-red-400 font-semibold underline"
+      >
+        Limpiar filtro
+      </a>
+    )
+  }
 </aside>

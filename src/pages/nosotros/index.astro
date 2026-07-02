@@ -1,10 +1,9 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import BrandsGrid from "../../pages/brands/BrandsGrid.astro";
+import BrandsGrid from "../marcas/BrandsGrid.astro";
 ---
 
 <BaseLayout title="Nosotros">
-  <!-- SOBRE NOSOTROS -->
   <section class="bg-black py-20">
     <div class="max-w-7xl mx-auto px-6">
       <div class="bg-surface rounded-2xl shadow-lg overflow-hidden">
@@ -37,7 +36,6 @@ import BrandsGrid from "../../pages/brands/BrandsGrid.astro";
     </div>
   </section>
 
-  <!-- MISION & VISION -->
   <section class="bg-black py-16">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-8">
@@ -62,13 +60,12 @@ import BrandsGrid from "../../pages/brands/BrandsGrid.astro";
     </div>
   </section>
 
-  <!-- MARCAS -->
   <section class="bg-black py-20">
     <div class="max-w-7xl mx-auto px-6">
       <div class="flex items-center justify-between mb-10">
         <h2 class="text-white text-3xl font-bold">Nuestras marcas</h2>
 
-        <a href="/brands" class="text-red-500 hover:text-red-400 font-semibold">
+        <a href="/marcas" class="text-red-500 hover:text-red-400 font-semibold">
           Ver todas →
         </a>
       </div>

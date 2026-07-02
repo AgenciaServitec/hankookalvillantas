@@ -5,16 +5,20 @@ import ContentWidth from "../components/ui/ContentWidth.astro";
 <footer class="bg-surface text-gray-300">
   <ContentWidth>
     <div class="py-14 grid md:grid-cols-3 gap-10">
-      <!-- INFO -->
       <div>
-        <img src="/images/logo.webp" class="h-10 mb-4" />
+        <a href="/"
+          ><img
+            src="/images/logo.webp"
+            alt="Logo de FacilCar"
+            class="h-10 mb-4"
+          /></a
+        >
 
         <p class="text-sm leading-relaxed">
           Brindamos atención empática y profesional. Garantizamos nuestros
           productos y servicios.
         </p>
 
-        <!-- BOTÓN WHATSAPP -->
         <a
           href="https://api.whatsapp.com/send?phone=51943581507&text=Hola,%20quiero%20cotizar%20llantas"
           target="_blank"
@@ -38,7 +42,6 @@ import ContentWidth from "../components/ui/ContentWidth.astro";
         </a>
       </div>
 
-      <!-- CONTACTO -->
       <div>
         <h3 class="text-white font-bold mb-4">Contacto</h3>
 
@@ -64,7 +67,6 @@ import ContentWidth from "../components/ui/ContentWidth.astro";
           </li>
         </ul>
 
-        <!-- CARD EMPRESA -->
         <div class="mt-5 bg-surface-alt border border-white/10 rounded-xl p-5">
           <p class="text-white font-semibold">
             IMPORTACIONES Y EXPORTACIONES FACIL CAR E.I.R.L.
@@ -73,25 +75,31 @@ import ContentWidth from "../components/ui/ContentWidth.astro";
         </div>
       </div>
 
-      <!-- LINKS -->
       <div>
         <h3 class="text-white font-bold mb-4">Información</h3>
         <ul class="space-y-2 text-sm">
           <li>
-            <a href="/about" class="hover:text-red-500 transition"> Nosotros</a>
+            <a href="/nosotros" class="hover:text-red-500 transition"
+              >Nosotros</a
+            >
           </li>
           <li>
-            <a href="/products" class="hover:text-red-500 transition">
+            <a href="/productos" class="hover:text-red-500 transition">
               Productos
             </a>
           </li>
           <li>
-            <a href="/contact" class="hover:text-red-500 transition">
+            <a href="/contacto" class="hover:text-red-500 transition">
               Contacto
             </a>
           </li>
           <li>
-            <a href="/terms" class="hover:text-red-500 transition"> Términos</a>
+            <a
+              href="/terminos-y-condiciones"
+              class="hover:text-red-500 transition"
+            >
+              Términos</a
+            >
           </li>
         </ul>
       </div>

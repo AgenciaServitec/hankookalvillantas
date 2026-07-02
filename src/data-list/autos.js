@@ -7,7 +7,8 @@ const products = [
     size: "215/75 R14",
     load: 800,
     speed: "160 Km/h",
-    image: "/images/products/continental/autos-continental-sportiva-215-75-r14.webp",
+    image:
+      "/images/products/continental/autos-continental-sportiva-215-75-r14.webp",
   },
   {
     id: 2,
@@ -17,7 +18,8 @@ const products = [
     size: "195/65 R15",
     load: 615,
     speed: "210 Km/h",
-    image: "/images/products/continental/autos-continental-powercontact-195-65-r15.webp",
+    image:
+      "/images/products/continental/autos-continental-powercontact-195-65-r15.webp",
   },
   {
     id: 3,
@@ -27,7 +29,8 @@ const products = [
     size: "205/55 R16",
     load: 615,
     speed: "210 Km/h",
-    image: "/images/products/continental/autos-continental-powercontact-205-55-r16.webp",
+    image:
+      "/images/products/continental/autos-continental-powercontact-205-55-r16.webp",
   },
   {
     id: 4,
@@ -37,7 +40,8 @@ const products = [
     size: "205/60 R16",
     load: 630,
     speed: "240 Km/h",
-    image: "/images/products/continental/autos-continental-powercontact-205-60-r16.webp",
+    image:
+      "/images/products/continental/autos-continental-powercontact-205-60-r16.webp",
   },
   {
     id: 5,
@@ -47,7 +51,8 @@ const products = [
     size: "245/35 R18",
     load: 630,
     speed: "300 Km/h",
-    image: "/images/products/bridgestone/autos-bridgestone-potenza-245-35-r18.webp",
+    image:
+      "/images/products/bridgestone/autos-bridgestone-potenza-245-35-r18.webp",
   },
   {
     id: 6,
@@ -97,7 +102,8 @@ const products = [
     size: "245/35 R19",
     load: 1060,
     speed: "300 Km/h",
-    image: "/images/products/bridgestone/autos-bridgestone-re003-245-35-r19.webp",
+    image:
+      "/images/products/bridgestone/autos-bridgestone-re003-245-35-r19.webp",
   },
   {
     id: 11,
@@ -137,7 +143,8 @@ const products = [
     size: "225/40 R17",
     load: 670,
     speed: "300 Km/h",
-    image: "/images/products/bridgestone/autos-bridgestone-re050a-225-40-r17.webp",
+    image:
+      "/images/products/bridgestone/autos-bridgestone-re050a-225-40-r17.webp",
   },
   {
     id: 15,
