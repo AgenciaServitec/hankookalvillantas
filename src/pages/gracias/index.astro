@@ -1,0 +1,103 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="¡Gracias por tu consulta! | FacilCar">
+  <section
+    class="bg-black relative min-h-[75vh] flex flex-col items-center justify-center w-full overflow-hidden py-16"
+  >
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-6 text-center">
+      <div class="relative z-10 flex flex-col items-center animate-fade-in">
+        <div class="mb-8 relative">
+          <div class="absolute inset-0 bg-red-600/20 blur-3xl rounded-full">
+          </div>
+          <div
+            class="relative bg-surface rounded-full p-4 border border-gray-800 shadow-xl"
+          >
+            <svg
+              class="w-16 h-16 md:w-20 md:h-20 text-red-500"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+        </div>
+
+        <div class="mb-10 max-w-lg">
+          <h2 class="text-white text-2xl md:text-3xl font-extrabold mb-3">
+            ¡Tu solicitud ha sido recibida!
+          </h2>
+          <p class="text-gray-300 text-sm md:text-base leading-relaxed">
+            En breve, uno de nuestros asesores técnicos se pondrá en contacto
+            contigo para brindarte la cotización exacta de los neumáticos
+            perfectos para tu vehículo.
+          </p>
+        </div>
+
+        <a
+          href="https://api.whatsapp.com/send?phone=51943581507&text=Hola,%20acabo%20de%20enviar%20el%20formulario%20en%20su%20web%20y%20me%20gustar%C3%ADa%20agilizar%20la%20cotizaci%C3%B3n%20de%20mis%20llantas."
+          target="_blank"
+          rel="noopener"
+          class="group flex items-center gap-3 text-center px-6 py-4 bg-red-600 hover:bg-red-700 text-white font-bold rounded uppercase text-sm transition-colors duration-300 shadow-lg"
+        >
+          <svg
+            class="w-6 h-6 md:w-7 md:h-7 group-hover:rotate-12 transition-transform duration-300"
+            viewBox="0 0 448 512"
+            fill="currentColor"
+          >
+            <path
+              d="M380.9 97.1C339-3.1 214.8-33.7 123.6 18.7 32.4 71.1-8.1 192.1 35.7 288.3L0 416l132.1-34.7c91.6 49.5 206.5 17.9 254.6-73.4 48.1-91.3 11.4-205.1-75.8-259.8z"
+            ></path>
+          </svg>
+          <span class="text-xs md:text-sm">Atención Inmediata vía WhatsApp</span
+          >
+        </a>
+
+        <div class="flex flex-col items-center mt-12">
+          <a
+            href="/"
+            class="flex items-center gap-2 text-gray-400 hover:text-white font-bold text-[10px] md:text-xs transition-colors group uppercase tracking-wider"
+          >
+            <svg
+              class="w-4 h-4 transition-transform group-hover:-translate-y-0.5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+              ></path>
+            </svg>
+            Regresar al Inicio
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .animate-fade-in {
+    animation: fadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
